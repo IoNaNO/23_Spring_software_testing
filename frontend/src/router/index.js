@@ -53,46 +53,46 @@ const routes = [
         name:'sales',
         component:Sales
       },
-      // {
-      //   path:'/two',
-      //   name:'two',
-      //   component:Two
-      // },
-      // {
-      //   path:'/four',
-      //   name:'four',
-      //   component:Four
-      // },
-      // {
-      //   path:'/seven',
-      //   name:'seven',
-      //   component:Seven
-      // },
-      // {
-      //   path:'/nine',
-      //   name:'nine',
-      //   component:Nine
-      // },
-      // {
-      //   path:'/ten',
-      //   name:'ten',
-      //   component:Ten
-      // },
-      // {
-      //   path:'/eleven',
-      //   name:'eleven',
-      //   component:Eleven
-      // },
-      // {
-      //   path:'/twelve',
-      //   name:'twelve',
-      //   component:Twelve
-      // },
-      // {
-      //   path:'/thirteen',
-      //   name:'thirteen',
-      //   component:Thirteen
-      // }
+      {
+        path:'/two',
+        name:'two',
+        component:Two
+      },
+      {
+        path:'/four',
+        name:'four',
+        component:Four
+      },
+      {
+        path:'/seven',
+        name:'seven',
+        component:Seven
+      },
+      {
+        path:'/nine',
+        name:'nine',
+        component:Nine
+      },
+      {
+        path:'/ten',
+        name:'ten',
+        component:Ten
+      },
+      {
+        path:'/eleven',
+        name:'eleven',
+        component:Eleven
+      },
+      {
+        path:'/twelve',
+        name:'twelve',
+        component:Twelve
+      },
+      {
+        path:'/thirteen',
+        name:'thirteen',
+        component:Thirteen
+      }
     ]
   }
 ]

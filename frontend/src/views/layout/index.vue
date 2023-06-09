@@ -10,7 +10,7 @@
       <HeadBar @changeCollapse="changeCollapse"/>
       <el-main style="height:100px;" class="main"><router-view /></el-main>
       <el-footer style="height:20px;font-size:12px;text-align:center;">
-        软件测试可视化平台@Copyright SSE 2021</el-footer>
+        软件测试可视化平台@Copyright SSE 2023</el-footer>
     </el-container>
   </el-container>
 </template>
