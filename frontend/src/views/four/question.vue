@@ -40,9 +40,9 @@
 <p style="margin-top:50px;">2.非功能需求</p>
 <p>性能测试：响应时间，准确度等；</p>
 <p>压力测试：考虑在如双十一等活动期间</p>
-<p style="margin-top:50px;">三.Class level</p>
+<p style="margin-top:50px;">3.Class level</p>
 <p>考虑类之间，类内方法/函数之间的调用的变量边界等</p>
-<p style="margin-top:50px;">四.Method level</p>
+<p style="margin-top:50px;">4.Method level</p>
 <p>输入/输出变量取值边界，循环次数等</p>
 
   </div>
