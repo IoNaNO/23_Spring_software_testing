@@ -1,0 +1,632 @@
+[
+  {
+    "id": "TS1",
+    "year": "2008",
+    "month": "4",
+    "day": "1",
+    "expectation": "2008-04-02"
+  },
+  {
+    "id": "TS2",
+    "year": "2012",
+    "month": "6",
+    "day": "28",
+    "expectation": "2012-06-29"
+  },
+  {
+    "id": "TS3",
+    "year": "2016",
+    "month": "9",
+    "day": "29",
+    "expectation": "2016-09-30"
+  },
+  {
+    "id": "TS4",
+    "year": "2020",
+    "month": "11",
+    "day": "30",
+    "expectation": "2020-12-01"
+  },
+  {
+    "id": "TS5",
+    "year": "2008",
+    "month": "4",
+    "day": "31",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS6",
+    "year": "2012",
+    "month": "1",
+    "day": "5",
+    "expectation": "2012-01-06"
+  },
+  {
+    "id": "TS7",
+    "year": "2016",
+    "month": "3",
+    "day": "28",
+    "expectation": "2016-03-29"
+  },
+  {
+    "id": "TS8",
+    "year": "2020",
+    "month": "5",
+    "day": "29",
+    "expectation": "2020-05-30"
+  },
+  {
+    "id": "TS9",
+    "year": "2008",
+    "month": "7",
+    "day": "30",
+    "expectation": "2008-07-31"
+  },
+  {
+    "id": "TS10",
+    "year": "2012",
+    "month": "8",
+    "day": "31",
+    "expectation": "2012-09-01"
+  },
+  {
+    "id": "TS11",
+    "year": "2016",
+    "month": "2",
+    "day": "10",
+    "expectation": "2016-02-11"
+  },
+  {
+    "id": "TS12",
+    "year": "2020",
+    "month": "2",
+    "day": "28",
+    "expectation": "2020-02-29"
+  },
+  {
+    "id": "TS13",
+    "year": "2008",
+    "month": "2",
+    "day": "29",
+    "expectation": "2008-03-01"
+  },
+  {
+    "id": "TS14",
+    "year": "2012",
+    "month": "2",
+    "day": "30",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS15",
+    "year": "2016",
+    "month": "2",
+    "day": "31",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS16",
+    "year": "2020",
+    "month": "12",
+    "day": "15",
+    "expectation": "2020-12-16"
+  },
+  {
+    "id": "TS17",
+    "year": "2008",
+    "month": "12",
+    "day": "28",
+    "expectation": "2008-12-29"
+  },
+  {
+    "id": "TS18",
+    "year": "2012",
+    "month": "12",
+    "day": "29",
+    "expectation": "2012-12-30"
+  },
+  {
+    "id": "TS19",
+    "year": "2016",
+    "month": "12",
+    "day": "30",
+    "expectation": "2016-12-31"
+  },
+  {
+    "id": "TS20",
+    "year": "2020",
+    "month": "12",
+    "day": "31",
+    "expectation": "2021-01-01"
+  },
+  {
+    "id": "TS21",
+    "year": "2009",
+    "month": "4",
+    "day": "20",
+    "expectation": "2009-04-21"
+  },
+  {
+    "id": "TS22",
+    "year": "2010",
+    "month": "6",
+    "day": "28",
+    "expectation": "2010-06-29"
+  },
+  {
+    "id": "TS23",
+    "year": "2011",
+    "month": "9",
+    "day": "29",
+    "expectation": "2011-09-30"
+  },
+  {
+    "id": "TS24",
+    "year": "2013",
+    "month": "11",
+    "day": "30",
+    "expectation": "2013-12-01"
+  },
+  {
+    "id": "TS25",
+    "year": "2014",
+    "month": "4",
+    "day": "31",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS26",
+    "year": "2015",
+    "month": "10",
+    "day": "22",
+    "expectation": "2015-10-23"
+  },
+  {
+    "id": "TS27",
+    "year": "2017",
+    "month": "3",
+    "day": "28",
+    "expectation": "2017-03-29"
+  },
+  {
+    "id": "TS28",
+    "year": "2018",
+    "month": "5",
+    "day": "29",
+    "expectation": "2018-05-30"
+  },
+  {
+    "id": "TS29",
+    "year": "2019",
+    "month": "7",
+    "day": "30",
+    "expectation": "2019-07-31"
+  },
+  {
+    "id": "TS30",
+    "year": "2009",
+    "month": "8",
+    "day": "31",
+    "expectation": "2009-09-01"
+  },
+  {
+    "id": "TS31",
+    "year": "2010",
+    "month": "2",
+    "day": "23",
+    "expectation": "2010-02-24"
+  },
+  {
+    "id": "TS32",
+    "year": "2011",
+    "month": "2",
+    "day": "28",
+    "expectation": "2011-03-01"
+  },
+  {
+    "id": "TS33",
+    "year": "2013",
+    "month": "2",
+    "day": "29",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS34",
+    "year": "2014",
+    "month": "2",
+    "day": "30",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS35",
+    "year": "2015",
+    "month": "2",
+    "day": "31",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS36",
+    "year": "2017",
+    "month": "12",
+    "day": "25",
+    "expectation": "2017-12-26"
+  },
+  {
+    "id": "TS37",
+    "year": "2018",
+    "month": "12",
+    "day": "28",
+    "expectation": "2018-12-29"
+  },
+  {
+    "id": "TS38",
+    "year": "2019",
+    "month": "12",
+    "day": "29",
+    "expectation": "2019-12-30"
+  },
+  {
+    "id": "TS39",
+    "year": "2019",
+    "month": "12",
+    "day": "30",
+    "expectation": "2019-12-31"
+  },
+  {
+    "id": "TS40",
+    "year": "2019",
+    "month": "12",
+    "day": "31",
+    "expectation": "2020-01-01"
+  },
+  {
+    "id": "TS41",
+    "year": "1999",
+    "month": "4",
+    "day": "5",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS42",
+    "year": "1998",
+    "month": "3",
+    "day": "28",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS43",
+    "year": "1999",
+    "month": "2",
+    "day": "29",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS44",
+    "year": "1800",
+    "month": "12",
+    "day": "30",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS45",
+    "year": "1900",
+    "month": "2",
+    "day": "31",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS46",
+    "year": "2101",
+    "month": "4",
+    "day": "5",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS47",
+    "year": "2102",
+    "month": "3",
+    "day": "28",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS48",
+    "year": "2222",
+    "month": "2",
+    "day": "29",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS49",
+    "year": "2500",
+    "month": "12",
+    "day": "30",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS50",
+    "year": "10000",
+    "month": "2",
+    "day": "31",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS51",
+    "year": "2008",
+    "month": "0",
+    "day": "5",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS52",
+    "year": "2019",
+    "month": "-1",
+    "day": "28",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS53",
+    "year": "2020",
+    "month": "-100",
+    "day": "29",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS54",
+    "year": "2017",
+    "month": "-3",
+    "day": "30",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS55",
+    "year": "2012",
+    "month": "-6",
+    "day": "31",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS56",
+    "year": "2008",
+    "month": "13",
+    "day": "5",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS57",
+    "year": "2019",
+    "month": "100",
+    "day": "28",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS58",
+    "year": "2020",
+    "month": "15",
+    "day": "29",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS59",
+    "year": "2017",
+    "month": "16",
+    "day": "30",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS60",
+    "year": "2012",
+    "month": "1000",
+    "day": "31",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS61",
+    "year": "2008",
+    "month": "4",
+    "day": "0",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS62",
+    "year": "2019",
+    "month": "3",
+    "day": "-1",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS63",
+    "year": "2020",
+    "month": "2",
+    "day": "-100",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS64",
+    "year": "2017",
+    "month": "12",
+    "day": "-2",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS65",
+    "year": "2012",
+    "month": "2",
+    "day": "-5",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS66",
+    "year": "2008",
+    "month": "4",
+    "day": "32",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS67",
+    "year": "2019",
+    "month": "3",
+    "day": "33",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS68",
+    "year": "2020",
+    "month": "2",
+    "day": "50",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS69",
+    "year": "2017",
+    "month": "12",
+    "day": "100",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS70",
+    "year": "2012",
+    "month": "2",
+    "day": "1000",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS71",
+    "year": "1998",
+    "month": "-2",
+    "day": "-1",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS72",
+    "year": "1998",
+    "month": "-2",
+    "day": "0",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS73",
+    "year": "1998",
+    "month": "-2",
+    "day": "32",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS74",
+    "year": "1998",
+    "month": "0",
+    "day": "-1",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS75",
+    "year": "1998",
+    "month": "0",
+    "day": "0",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS76",
+    "year": "1998",
+    "month": "0",
+    "day": "32",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS77",
+    "year": "1998",
+    "month": "13",
+    "day": "-1",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS78",
+    "year": "1998",
+    "month": "13",
+    "day": "0",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS79",
+    "year": "1998",
+    "month": "13",
+    "day": "32",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS80",
+    "year": "2101",
+    "month": "-2",
+    "day": "-1",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS81",
+    "year": "2101",
+    "month": "-2",
+    "day": "0",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS82",
+    "year": "2101",
+    "month": "-2",
+    "day": "32",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS83",
+    "year": "2101",
+    "month": "0",
+    "day": "-1",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS84",
+    "year": "2101",
+    "month": "0",
+    "day": "0",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS85",
+    "year": "2101",
+    "month": "0",
+    "day": "32",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS86",
+    "year": "2101",
+    "month": "13",
+    "day": "-1",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS87",
+    "year": "2101",
+    "month": "13",
+    "day": "0",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS88",
+    "year": "2101",
+    "month": "13",
+    "day": "32",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS89",
+    "year": "2100",
+    "month": "13",
+    "day": "32",
+    "expectation": "-1"
+  },
+  {
+    "id": "TS90",
+    "year": "2101",
+    "month": "13",
+    "day": "2",
+    "expectation": "-1"
+  }
+]
