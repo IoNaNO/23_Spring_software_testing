@@ -2,7 +2,7 @@
   <el-header class="header">
     <div class="title-bar">
         <i class="el-icon-s-fold" @click="changeCollapse"></i>
-        <h1 class="title">2023陈元哲组软件测试平台</h1>
+        <h1 class="title">2023"一排一座"软件测试平台</h1>
     </div>
 
     <el-dropdown>
