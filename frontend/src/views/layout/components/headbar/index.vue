@@ -1,26 +1,21 @@
 <template>
   <el-header class="header">
-    <div>
-      <i class="el-icon-s-fold" @click="changeCollapse"></i>
-      <span>软件测试平台</span>
+    <div class="title-bar">
+        <i class="el-icon-s-fold" @click="changeCollapse"></i>
+        <h1 class="title">2023陈元哲组软件测试平台</h1>
     </div>
 
     <el-dropdown>
       <div class="avatar-bar">
-        <el-avatar
-          src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80"
-          shape="square"
-          :size="40"
-          class="avatar"
-        ></el-avatar>
-        <span>欢迎来到软件测试平台!</span>
+      
       </div>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item @click.native="onLogout">退出登录</el-dropdown-item>
+       
       </el-dropdown-menu>
     </el-dropdown>
   </el-header>
 </template>
+
 
 <script>
 export default {
@@ -68,7 +63,10 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #002766; // 你可以选择不同的颜色
+  padding: 10px 20px; // 为头部添加一些内边距，使其看起来更宽敞
 }
+
 .avatar-bar {
   display: flex;
   justify-content: center;
@@ -77,4 +75,12 @@ export default {
     margin-right: 10px;
   }
 }
+
+.title {
+  color: #ffffff; // 设置标题为白色，与背景颜色形成对比
+  font-size: 30px !important;
+  font-weight: bold; // 增加字体粗细
+  margin-left: 10px; // 增加左边距，与图标之间留出一些空间
+}
+
 </style>
