@@ -1,0 +1,822 @@
+2021-08-28 00:16:48,817 INFO [test_login_module.py(test_register:26)] - 接口用例数据：['1', '使用随机数1，注册成功', 'http://39.100.104.214:8080', '/register/', 'post', '{"username":"juno${get_unique_num1}","password":"juno999999","email":"juno123@qq.com"}', '"code": "00"', 'userid', '', '']
+2021-08-28 00:16:48,819 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${get_unique_num1}","password":"juno999999","email":"juno123@qq.com"}
+2021-08-28 00:16:48,823 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30323","password":"juno999999","email":"juno123@qq.com"}
+2021-08-28 00:16:49,349 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:49,351 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "00", "userid": 391}
+2021-08-28 00:16:49,352 INFO [request_util.py(api_postprocess:58)] - 关联参数提取成功：【userid: 391】
+2021-08-28 00:16:49,353 INFO [assert_util.py(assert_keyword:11)] - 【"code": "00"】关键字断言成功【{"code": "00", "userid": 391}】
+2021-08-28 00:16:49,369 INFO [test_login_module.py(test_register:26)] - 接口用例数据：['2', '用户名重复，注册失败', 'http://39.100.104.214:8080', '/register/', 'post', '{"username":"juno${unique_num1}","password":"juno999999","email":"juno123@qq.com"}', '"code": "01"', '', '', '']
+2021-08-28 00:16:49,369 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${unique_num1}","password":"juno999999","email":"juno123@qq.com"}
+2021-08-28 00:16:49,371 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30323","password":"juno999999","email":"juno123@qq.com"}
+2021-08-28 00:16:49,630 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:49,631 INFO [request_util.py(api_request:83)] - 响应数据：{"username": "juno30323", "code": "01"}
+2021-08-28 00:16:49,631 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:49,632 INFO [assert_util.py(assert_keyword:11)] - 【"code": "01"】关键字断言成功【{"username": "juno30323", "code": "01"}】
+2021-08-28 00:16:49,646 INFO [test_login_module.py(test_register:26)] - 接口用例数据：['3', '使用随机数2，注册成功', 'http://39.100.104.214:8080', '/register/', 'post', '{"username":"juno${get_unique_num2}","password":"juno999999","email":"juno123@qq.com"}', '"code": "00"', 'userid', '', '']
+2021-08-28 00:16:49,647 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${get_unique_num2}","password":"juno999999","email":"juno123@qq.com"}
+2021-08-28 00:16:49,665 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30324","password":"juno999999","email":"juno123@qq.com"}
+2021-08-28 00:16:50,118 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:50,119 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "00", "userid": 392}
+2021-08-28 00:16:50,120 INFO [request_util.py(api_postprocess:58)] - 关联参数提取成功：【userid: 392】
+2021-08-28 00:16:50,121 INFO [assert_util.py(assert_keyword:11)] - 【"code": "00"】关键字断言成功【{"code": "00", "userid": 392}】
+2021-08-28 00:16:50,135 INFO [test_login_module.py(test_login:41)] - 接口用例数据：['1', '关联随机数1，登录成功', 'http://39.100.104.214:8080', '/login/', 'post', '{"username":"juno${unique_num1}","password":"${md5(\'juno999999\')}"}', '"token"', 'token', '', '']
+2021-08-28 00:16:50,136 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${unique_num1}","password":"${md5('juno999999')}"}
+2021-08-28 00:16:50,137 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30323","password":"4c1c1924ad2ba4d1136acee44a1b39a2"}
+2021-08-28 00:16:50,638 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:50,639 INFO [request_util.py(api_request:83)] - 响应数据：{"token": "e445c432069d25295831ac795fb3508b", "code": "00", "userid": 391, "login_time": "2021-08-28 00:16:50"}
+2021-08-28 00:16:50,640 INFO [request_util.py(api_postprocess:58)] - 关联参数提取成功：【token: e445c432069d25295831ac795fb3508b】
+2021-08-28 00:16:50,642 INFO [assert_util.py(assert_keyword:11)] - 【"token"】关键字断言成功【{"token": "e445c432069d25295831ac795fb3508b", "code": "00", "userid": 391, "login_time": "2021-08-28 00:16:50"}】
+2021-08-28 00:16:50,656 INFO [test_login_module.py(test_login:41)] - 接口用例数据：['2', '关联随机数2，登录成功', 'http://39.100.104.214:8080', '/login/', 'post', '{"username":"juno${unique_num2}","password":"${md5(\'juno999999\')}"}', '"token"', 'token', '', '']
+2021-08-28 00:16:50,656 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${unique_num2}","password":"${md5('juno999999')}"}
+2021-08-28 00:16:50,657 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30324","password":"4c1c1924ad2ba4d1136acee44a1b39a2"}
+2021-08-28 00:16:51,071 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:51,072 INFO [request_util.py(api_request:83)] - 响应数据：{"token": "5350376ee236f337cf5fd21c26dda3da", "code": "00", "userid": 392, "login_time": "2021-08-28 00:16:50"}
+2021-08-28 00:16:51,072 INFO [request_util.py(api_postprocess:58)] - 关联参数提取成功：【token: 5350376ee236f337cf5fd21c26dda3da】
+2021-08-28 00:16:51,074 INFO [assert_util.py(assert_keyword:11)] - 【"token"】关键字断言成功【{"token": "5350376ee236f337cf5fd21c26dda3da", "code": "00", "userid": 392, "login_time": "2021-08-28 00:16:50"}】
+2021-08-28 00:16:51,086 INFO [test_login_module.py(test_login:41)] - 接口用例数据：['3', '密码错误，登录成功', 'http://39.100.104.214:8080', '/login/', 'post', '{"username":"juno${unique_num2}","password":"juno999999"}', '"code": "03"', '', '', '']
+2021-08-28 00:16:51,087 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${unique_num2}","password":"juno999999"}
+2021-08-28 00:16:51,088 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30324","password":"juno999999"}
+2021-08-28 00:16:51,389 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:51,389 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "03", "params": {"username": "juno30324", "password": "juno999999"}}
+2021-08-28 00:16:51,390 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:51,391 INFO [assert_util.py(assert_keyword:11)] - 【"code": "03"】关键字断言成功【{"code": "03", "params": {"username": "juno30324", "password": "juno999999"}}】
+2021-08-28 00:16:51,409 INFO [test_edit_module.py(test_create:35)] - 接口用例数据：['1', '创建博文成功', 'http://39.100.104.214:8080', '/create/', 'post', '{"userid":${userid}, "token":"${token}", "title":"title test", "content":"content test"}', '"code": "00"', '', '', '']
+2021-08-28 00:16:51,410 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token":"${token}", "title":"title test", "content":"content test"}
+2021-08-28 00:16:51,413 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"userid":392, "token":"5350376ee236f337cf5fd21c26dda3da", "title":"title test", "content":"content test"}
+2021-08-28 00:16:51,880 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:51,881 INFO [request_util.py(api_request:83)] - 响应数据：{"data": [{"content": "content test", "title": "title test"}], "code": "00", "userid": 392}
+2021-08-28 00:16:51,882 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:51,883 INFO [assert_util.py(assert_keyword:11)] - 【"code": "00"】关键字断言成功【{"data": [{"content": "content test", "title": "title test"}], "code": "00", "userid": 392}】
+2021-08-28 00:16:51,897 INFO [test_edit_module.py(test_create:35)] - 接口用例数据：['2', '创建博文失败', 'http://39.100.104.214:8080', '/create/', 'post', '{"userid":${userid}, "token":"123", "title":"title test", "content":"content test"}', '"code": "03"', '', '', '']
+2021-08-28 00:16:51,898 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token":"123", "title":"title test", "content":"content test"}
+2021-08-28 00:16:51,899 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"userid":392, "token":"123", "title":"title test", "content":"content test"}
+2021-08-28 00:16:52,178 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:52,179 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "03", "userid": 392}
+2021-08-28 00:16:52,180 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:52,181 INFO [assert_util.py(assert_keyword:11)] - 【"code": "03"】关键字断言成功【{"code": "03", "userid": 392}】
+2021-08-28 00:16:52,194 INFO [test_edit_module.py(test_user_blog_search:50)] - 接口用例数据：['1', '用户存在博文，查询成功', 'http://39.100.104.214:8080', '/getBlogsOfUser/', 'post', '{"userid":${userid}, "token":"${token}"}', '"title"', 'articleId', '', '']
+2021-08-28 00:16:52,195 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token":"${token}"}
+2021-08-28 00:16:52,196 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"userid":392, "token":"5350376ee236f337cf5fd21c26dda3da"}
+2021-08-28 00:16:52,545 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:52,546 INFO [request_util.py(api_request:83)] - 响应数据：{"data": [{"update_time": null, "title": "title test", "content": "content test", "articleId": 160, "owner": 392, "posted_on": "2021-08-28 00:16:51"}], "code": "00", "userid": 392}
+2021-08-28 00:16:52,547 INFO [request_util.py(api_postprocess:58)] - 关联参数提取成功：【articleId: 160】
+2021-08-28 00:16:52,548 INFO [assert_util.py(assert_keyword:11)] - 【"title"】关键字断言成功【{"data": [{"update_time": null, "title": "title test", "content": "content test", "articleId": 160, "owner": 392, "posted_on": "2021-08-28 00:16:51"}], "code": "00", "userid": 392}】
+2021-08-28 00:16:52,560 INFO [test_edit_module.py(test_user_blog_search:50)] - 接口用例数据：['2', '用户token有误，查询失败', 'http://39.100.104.214:8080', '/getBlogsOfUser/', 'post', '{"userid":${userid}, "token":"123"}', '"code": "03"', '', '', '']
+2021-08-28 00:16:52,561 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token":"123"}
+2021-08-28 00:16:52,561 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"userid":392, "token":"123"}
+2021-08-28 00:16:52,921 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:52,922 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "03", "userid": 392}
+2021-08-28 00:16:52,923 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:52,924 INFO [assert_util.py(assert_keyword:11)] - 【"code": "03"】关键字断言成功【{"code": "03", "userid": 392}】
+2021-08-28 00:16:52,936 INFO [test_edit_module.py(test_blog_content_search:65)] - 接口用例数据：['1', '博文内容查询成功', 'http://39.100.104.214:8080', '/getBlogContent/${articleId}', 'get', '', '"content": "content test"', '', '', '']
+2021-08-28 00:16:52,936 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：/getBlogContent/${articleId}
+2021-08-28 00:16:52,938 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：/getBlogContent/160
+2021-08-28 00:16:53,202 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:53,203 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "00", "data": [{"update_time": null, "title": "title test", "content": "content test", "articleId": 160, "owner": 392, "posted_on": "2021-08-28 00:16:51"}]}
+2021-08-28 00:16:53,204 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:53,205 INFO [assert_util.py(assert_keyword:11)] - 【"content": "content test"】关键字断言成功【{"code": "00", "data": [{"update_time": null, "title": "title test", "content": "content test", "articleId": 160, "owner": 392, "posted_on": "2021-08-28 00:16:51"}]}】
+2021-08-28 00:16:53,221 INFO [test_edit_module.py(test_blog_content_search:65)] - 接口用例数据：['2', 'articleId有误，查询失败', 'http://39.100.104.214:8080', '/getBlogContent/1234', 'get', '', '"code": "03"', '', '', '']
+2021-08-28 00:16:53,222 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：/getBlogContent/1234
+2021-08-28 00:16:53,222 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：/getBlogContent/1234
+2021-08-28 00:16:53,379 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:53,380 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "03", "articleId": "1234"}
+2021-08-28 00:16:53,381 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:53,382 INFO [assert_util.py(assert_keyword:11)] - 【"code": "03"】关键字断言成功【{"code": "03", "articleId": "1234"}】
+2021-08-28 00:16:53,395 INFO [test_edit_module.py(test_blog_content_update:80)] - 接口用例数据：['1', '博文内容更新成功', 'http://39.100.104.214:8080', '/update/', 'put', '{"userid":${userid}, "token": "${token}", "articleId":${articleId}, "title":"python", "content":"test test"}', '"update_time":', '', '', '']
+2021-08-28 00:16:53,396 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token": "${token}", "articleId":${articleId}, "title":"python", "content":"test test"}
+2021-08-28 00:16:53,397 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"userid":392, "token": "5350376ee236f337cf5fd21c26dda3da", "articleId":160, "title":"python", "content":"test test"}
+2021-08-28 00:16:53,595 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:53,596 INFO [request_util.py(api_request:83)] - 响应数据：{"articleId": 160, "update_time": "2021-08-28 00:16:53", "code": "00", "userid": 392}
+2021-08-28 00:16:53,596 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:53,597 INFO [assert_util.py(assert_keyword:11)] - 【"update_time":】关键字断言成功【{"articleId": 160, "update_time": "2021-08-28 00:16:53", "code": "00", "userid": 392}】
+2021-08-28 00:16:53,610 INFO [test_edit_module.py(test_blog_content_update:80)] - 接口用例数据：['2', 'articleId有误，更新失败', 'http://39.100.104.214:8080', '/update/', 'put', '{"userid":${userid}, "token": "${token}", "articleId":1234, "title":"python", "content":"test test"}', '"code": "03"', '', '', '']
+2021-08-28 00:16:53,611 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token": "${token}", "articleId":1234, "title":"python", "content":"test test"}
+2021-08-28 00:16:53,612 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"userid":392, "token": "5350376ee236f337cf5fd21c26dda3da", "articleId":1234, "title":"python", "content":"test test"}
+2021-08-28 00:16:53,781 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:53,782 INFO [request_util.py(api_request:83)] - 响应数据：{"articleId": 1234, "code": "03", "userid": 392}
+2021-08-28 00:16:53,783 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:53,784 INFO [assert_util.py(assert_keyword:11)] - 【"code": "03"】关键字断言成功【{"articleId": 1234, "code": "03", "userid": 392}】
+2021-08-28 00:16:53,796 INFO [test_edit_module.py(test_blog_batch_search:95)] - 接口用例数据：['1', '博文批量查询成功', 'http://39.100.104.214:8080', '/getBlogsContent/articleIds=${articleId}', 'get', '', '"code": "00"', '', '', '']
+2021-08-28 00:16:53,797 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：/getBlogsContent/articleIds=${articleId}
+2021-08-28 00:16:53,798 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：/getBlogsContent/articleIds=160
+2021-08-28 00:16:53,939 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:53,940 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "00", "data": [{"update_time": "2021-08-28 00:16:53", "title": "python", "content": "test test", "articleId": 160, "owner": 392, "posted_on": "2021-08-28 00:16:51"}]}
+2021-08-28 00:16:53,940 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:53,941 INFO [assert_util.py(assert_keyword:11)] - 【"code": "00"】关键字断言成功【{"code": "00", "data": [{"update_time": "2021-08-28 00:16:53", "title": "python", "content": "test test", "articleId": 160, "owner": 392, "posted_on": "2021-08-28 00:16:51"}]}】
+2021-08-28 00:16:53,955 INFO [test_edit_module.py(test_blog_batch_search:95)] - 接口用例数据：['2', 'articleId有误，博文批量查询失败', 'http://39.100.104.214:8080', '/getBlogsContent/articleIds=null', 'get', '', '"code": "999"', '', '', '']
+2021-08-28 00:16:53,956 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：/getBlogsContent/articleIds=null
+2021-08-28 00:16:53,956 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：/getBlogsContent/articleIds=null
+2021-08-28 00:16:54,117 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:54,118 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "999"}
+2021-08-28 00:16:54,118 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:54,120 INFO [assert_util.py(assert_keyword:11)] - 【"code": "999"】关键字断言成功【{"code": "999"}】
+2021-08-28 00:16:54,131 INFO [test_edit_module.py(test_delete:110)] - 接口用例数据：['1', '博文删除成功', 'http://39.100.104.214:8080', '/delete/', 'post', '{"userid":${userid}, "token": "${token}", "articleId":[${articleId}]}', '"code": "00"', '', '', '']
+2021-08-28 00:16:54,132 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token": "${token}", "articleId":[${articleId}]}
+2021-08-28 00:16:54,133 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"userid":392, "token": "5350376ee236f337cf5fd21c26dda3da", "articleId":[160]}
+2021-08-28 00:16:54,261 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:54,262 INFO [request_util.py(api_request:83)] - 响应数据：{"articleId": [160], "code": "00", "userid": 392}
+2021-08-28 00:16:54,263 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:54,264 INFO [assert_util.py(assert_keyword:11)] - 【"code": "00"】关键字断言成功【{"articleId": [160], "code": "00", "userid": 392}】
+2021-08-28 00:16:54,277 INFO [test_edit_module.py(test_delete:110)] - 接口用例数据：['2', 'token有误，更新失败', 'http://39.100.104.214:8080', '/delete/', 'post', '{"userid":${userid}, "token": "123", "articleId":[]}', '"code": "03"', '', '', '']
+2021-08-28 00:16:54,277 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token": "123", "articleId":[]}
+2021-08-28 00:16:54,278 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"userid":392, "token": "123", "articleId":[]}
+2021-08-28 00:16:54,443 INFO [request_util.py(api_request:82)] - 接口调用成功！
+2021-08-28 00:16:54,444 INFO [request_util.py(api_request:83)] - 响应数据：{"code": "03", "userid": 392}
+2021-08-28 00:16:54,445 INFO [request_util.py(api_postprocess:47)] - 无关联参数提取..
+2021-08-28 00:16:54,446 INFO [assert_util.py(assert_keyword:11)] - 【"code": "03"】关键字断言成功【{"code": "03", "userid": 392}】
+2023-06-15 17:01:29,459 ERROR [excel_util.py(__init__:14)] - Excel初始化失败：【d:\repo\TestExample\InterfaceAutoTestWithPytest\test_data\test_case_data.xlsx】
+2023-06-15 17:01:29,460 ERROR [excel_util.py(__init__:15)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\excel_util.py", line 12, in __init__
+    self.wb = xlrd.open_workbook(file_name)
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\xlrd\__init__.py", line 170, in open_workbook
+    raise XLRDError(FILE_FORMAT_DESCRIPTIONS[file_format]+'; not supported')
+xlrd.biffh.XLRDError: Excel xlsx file; not supported
+
+2023-06-15 17:18:11,171 INFO [test_edit_module.py(test_create:35)] - 接口用例数据：['1', '创建博文成功', 'http://39.100.104.214:8080', '/create/', 'post', '{"userid":${userid}, "token":"${token}", "title":"title test", "content":"content test"}', '"code": "00"', '', '', '']
+2023-06-15 17:18:11,172 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token":"${token}", "title":"title test", "content":"content test"}
+2023-06-15 17:18:11,173 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【{"userid":${userid}, "token":"${token}", "title":"title test", "content":"content test"}】
+2023-06-15 17:18:11,174 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:11,175 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/create/】【post】
+2023-06-15 17:18:11,175 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 70, in api_request
+    request_data = api_preprocess(data)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:11,336 INFO [test_edit_module.py(test_create:35)] - 接口用例数据：['2', '创建博文失败', 'http://39.100.104.214:8080', '/create/', 'post', '{"userid":${userid}, "token":"123", "title":"title test", "content":"content test"}', '"code": "03"', '', '', '']
+2023-06-15 17:18:11,337 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token":"123", "title":"title test", "content":"content test"}
+2023-06-15 17:18:11,338 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【{"userid":${userid}, "token":"123", "title":"title test", "content":"content test"}】
+2023-06-15 17:18:11,339 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:11,340 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/create/】【post】
+2023-06-15 17:18:11,341 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 70, in api_request
+    request_data = api_preprocess(data)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:11,354 INFO [test_edit_module.py(test_user_blog_search:50)] - 接口用例数据：['1', '用户存在博文，查询成功', 'http://39.100.104.214:8080', '/getBlogsOfUser/', 'post', '{"userid":${userid}, "token":"${token}"}', '"title"', 'articleId', '', '']
+2023-06-15 17:18:11,355 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token":"${token}"}
+2023-06-15 17:18:11,356 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【{"userid":${userid}, "token":"${token}"}】
+2023-06-15 17:18:11,357 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:11,358 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/getBlogsOfUser/】【post】
+2023-06-15 17:18:11,358 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 70, in api_request
+    request_data = api_preprocess(data)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:11,369 INFO [test_edit_module.py(test_user_blog_search:50)] - 接口用例数据：['2', '用户token有误，查询失败', 'http://39.100.104.214:8080', '/getBlogsOfUser/', 'post', '{"userid":${userid}, "token":"123"}', '"code": "03"', '', '', '']
+2023-06-15 17:18:11,370 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token":"123"}
+2023-06-15 17:18:11,371 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【{"userid":${userid}, "token":"123"}】
+2023-06-15 17:18:11,371 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:11,372 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/getBlogsOfUser/】【post】
+2023-06-15 17:18:11,373 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 70, in api_request
+    request_data = api_preprocess(data)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:11,385 INFO [test_edit_module.py(test_blog_content_search:65)] - 接口用例数据：['1', '博文内容查询成功', 'http://39.100.104.214:8080', '/getBlogContent/${articleId}', 'get', '', '"content": "content test"', '', '', '']
+2023-06-15 17:18:11,386 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：/getBlogContent/${articleId}
+2023-06-15 17:18:11,387 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【/getBlogContent/${articleId}】
+2023-06-15 17:18:11,387 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'articleId'
+
+2023-06-15 17:18:11,388 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/getBlogContent/${articleId}】【get】
+2023-06-15 17:18:11,389 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 74, in api_request
+    uri = api_preprocess(uri)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'articleId'
+
+2023-06-15 17:18:11,399 INFO [test_edit_module.py(test_blog_content_search:65)] - 接口用例数据：['2', 'articleId有误，查询失败', 'http://39.100.104.214:8080', '/getBlogContent/1234', 'get', '', '"code": "03"', '', '', '']
+2023-06-15 17:18:11,400 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：/getBlogContent/1234
+2023-06-15 17:18:11,401 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：/getBlogContent/1234
+2023-06-15 17:18:32,434 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/getBlogContent/1234】【get】
+2023-06-15 17:18:32,446 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001A36CCE2400>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /getBlogContent/1234 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CCE2400>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 75, in api_request
+    response = requests.get((url+uri), headers=headers, cookies=cookies)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /getBlogContent/1234 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CCE2400>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+2023-06-15 17:18:32,555 INFO [test_edit_module.py(test_blog_content_update:80)] - 接口用例数据：['1', '博文内容更新成功', 'http://39.100.104.214:8080', '/update/', 'put', '{"userid":${userid}, "token": "${token}", "articleId":${articleId}, "title":"python", "content":"test test"}', '"update_time":', '', '', '']
+2023-06-15 17:18:32,556 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token": "${token}", "articleId":${articleId}, "title":"python", "content":"test test"}
+2023-06-15 17:18:32,557 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【{"userid":${userid}, "token": "${token}", "articleId":${articleId}, "title":"python", "content":"test test"}】
+2023-06-15 17:18:32,558 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:32,558 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/update/】【put】
+2023-06-15 17:18:32,559 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 77, in api_request
+    request_data = api_preprocess(data)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:32,572 INFO [test_edit_module.py(test_blog_content_update:80)] - 接口用例数据：['2', 'articleId有误，更新失败', 'http://39.100.104.214:8080', '/update/', 'put', '{"userid":${userid}, "token": "${token}", "articleId":1234, "title":"python", "content":"test test"}', '"code": "03"', '', '', '']
+2023-06-15 17:18:32,573 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token": "${token}", "articleId":1234, "title":"python", "content":"test test"}
+2023-06-15 17:18:32,574 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【{"userid":${userid}, "token": "${token}", "articleId":1234, "title":"python", "content":"test test"}】
+2023-06-15 17:18:32,575 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:32,576 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/update/】【put】
+2023-06-15 17:18:32,577 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 77, in api_request
+    request_data = api_preprocess(data)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:32,590 INFO [test_edit_module.py(test_blog_batch_search:95)] - 接口用例数据：['1', '博文批量查询成功', 'http://39.100.104.214:8080', '/getBlogsContent/articleIds=${articleId}', 'get', '', '"code": "00"', '', '', '']
+2023-06-15 17:18:32,591 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：/getBlogsContent/articleIds=${articleId}
+2023-06-15 17:18:32,591 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【/getBlogsContent/articleIds=${articleId}】
+2023-06-15 17:18:32,592 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'articleId'
+
+2023-06-15 17:18:32,593 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/getBlogsContent/articleIds=${articleId}】【get】
+2023-06-15 17:18:32,593 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 74, in api_request
+    uri = api_preprocess(uri)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'articleId'
+
+2023-06-15 17:18:32,605 INFO [test_edit_module.py(test_blog_batch_search:95)] - 接口用例数据：['2', 'articleId有误，博文批量查询失败', 'http://39.100.104.214:8080', '/getBlogsContent/articleIds=null', 'get', '', '"code": "999"', '', '', '']
+2023-06-15 17:18:32,605 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：/getBlogsContent/articleIds=null
+2023-06-15 17:18:32,606 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：/getBlogsContent/articleIds=null
+2023-06-15 17:18:53,642 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/getBlogsContent/articleIds=null】【get】
+2023-06-15 17:18:53,644 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001A36CF6D220>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /getBlogsContent/articleIds=null (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CF6D220>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 75, in api_request
+    response = requests.get((url+uri), headers=headers, cookies=cookies)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /getBlogsContent/articleIds=null (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CF6D220>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+2023-06-15 17:18:53,745 INFO [test_edit_module.py(test_delete:110)] - 接口用例数据：['1', '博文删除成功', 'http://39.100.104.214:8080', '/delete/', 'post', '{"userid":${userid}, "token": "${token}", "articleId":[${articleId}]}', '"code": "00"', '', '', '']
+2023-06-15 17:18:53,746 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token": "${token}", "articleId":[${articleId}]}
+2023-06-15 17:18:53,746 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【{"userid":${userid}, "token": "${token}", "articleId":[${articleId}]}】
+2023-06-15 17:18:53,747 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:53,748 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/delete/】【post】
+2023-06-15 17:18:53,749 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 70, in api_request
+    request_data = api_preprocess(data)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:53,761 INFO [test_edit_module.py(test_delete:110)] - 接口用例数据：['2', 'token有误，更新失败', 'http://39.100.104.214:8080', '/delete/', 'post', '{"userid":${userid}, "token": "123", "articleId":[]}', '"code": "03"', '', '', '']
+2023-06-15 17:18:53,762 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"userid":${userid}, "token": "123", "articleId":[]}
+2023-06-15 17:18:53,763 ERROR [request_util.py(api_preprocess:38)] - 请求数据预处理异常：【{"userid":${userid}, "token": "123", "articleId":[]}】
+2023-06-15 17:18:53,764 ERROR [request_util.py(api_preprocess:39)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:53,765 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/delete/】【post】
+2023-06-15 17:18:53,765 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 70, in api_request
+    request_data = api_preprocess(data)
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 25, in api_preprocess
+    if isinstance(PARAM_GLOBAL_DICT[var], str):
+KeyError: 'userid'
+
+2023-06-15 17:18:53,776 INFO [test_login_module.py(test_register:26)] - 接口用例数据：['1', '使用随机数1，注册成功', 'http://39.100.104.214:8080', '/register/', 'post', '{"username":"juno${get_unique_num1}","password":"juno999999","email":"juno123@qq.com"}', '"code": "00"', 'userid', '', '']
+2023-06-15 17:18:53,777 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${get_unique_num1}","password":"juno999999","email":"juno123@qq.com"}
+2023-06-15 17:18:53,778 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30309","password":"juno999999","email":"juno123@qq.com"}
+2023-06-15 17:19:14,831 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/register/】【post】
+2023-06-15 17:19:14,831 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001A36CD8D280>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /register/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CD8D280>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 71, in api_request
+    response = requests.post((url+uri), data=request_data, headers=headers, cookies=cookies)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /register/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CD8D280>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+2023-06-15 17:19:14,942 INFO [test_login_module.py(test_register:26)] - 接口用例数据：['2', '用户名重复，注册失败', 'http://39.100.104.214:8080', '/register/', 'post', '{"username":"juno${unique_num1}","password":"juno999999","email":"juno123@qq.com"}', '"code": "01"', '', '', '']
+2023-06-15 17:19:14,943 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${unique_num1}","password":"juno999999","email":"juno123@qq.com"}
+2023-06-15 17:19:14,944 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30309","password":"juno999999","email":"juno123@qq.com"}
+2023-06-15 17:19:35,983 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/register/】【post】
+2023-06-15 17:19:35,984 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001A36CEFA100>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /register/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CEFA100>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 71, in api_request
+    response = requests.post((url+uri), data=request_data, headers=headers, cookies=cookies)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /register/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CEFA100>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+2023-06-15 17:19:36,077 INFO [test_login_module.py(test_register:26)] - 接口用例数据：['3', '使用随机数2，注册成功', 'http://39.100.104.214:8080', '/register/', 'post', '{"username":"juno${get_unique_num2}","password":"juno999999","email":"juno123@qq.com"}', '"code": "00"', 'userid', '', '']
+2023-06-15 17:19:36,078 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${get_unique_num2}","password":"juno999999","email":"juno123@qq.com"}
+2023-06-15 17:19:36,079 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30310","password":"juno999999","email":"juno123@qq.com"}
+2023-06-15 17:19:57,124 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/register/】【post】
+2023-06-15 17:19:57,125 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001A36CFF3DC0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /register/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CFF3DC0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 71, in api_request
+    response = requests.post((url+uri), data=request_data, headers=headers, cookies=cookies)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /register/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CFF3DC0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+2023-06-15 17:19:57,219 INFO [test_login_module.py(test_login:41)] - 接口用例数据：['1', '关联随机数1，登录成功', 'http://39.100.104.214:8080', '/login/', 'post', '{"username":"juno${unique_num1}","password":"${md5(\'juno999999\')}"}', '"token"', 'token', '', '']
+2023-06-15 17:19:57,219 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${unique_num1}","password":"${md5('juno999999')}"}
+2023-06-15 17:19:57,220 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30309","password":"4c1c1924ad2ba4d1136acee44a1b39a2"}
+2023-06-15 17:20:18,263 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/login/】【post】
+2023-06-15 17:20:18,264 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001A36CF36910>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CF36910>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 71, in api_request
+    response = requests.post((url+uri), data=request_data, headers=headers, cookies=cookies)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CF36910>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+2023-06-15 17:20:18,376 INFO [test_login_module.py(test_login:41)] - 接口用例数据：['2', '关联随机数2，登录成功', 'http://39.100.104.214:8080', '/login/', 'post', '{"username":"juno${unique_num2}","password":"${md5(\'juno999999\')}"}', '"token"', 'token', '', '']
+2023-06-15 17:20:18,377 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${unique_num2}","password":"${md5('juno999999')}"}
+2023-06-15 17:20:18,378 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30310","password":"4c1c1924ad2ba4d1136acee44a1b39a2"}
+2023-06-15 17:20:39,407 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/login/】【post】
+2023-06-15 17:20:39,409 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001A36CFE4670>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CFE4670>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 71, in api_request
+    response = requests.post((url+uri), data=request_data, headers=headers, cookies=cookies)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CFE4670>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+2023-06-15 17:20:39,501 INFO [test_login_module.py(test_login:41)] - 接口用例数据：['3', '密码错误，登录成功', 'http://39.100.104.214:8080', '/login/', 'post', '{"username":"juno${unique_num2}","password":"juno999999"}', '"code": "03"', '', '', '']
+2023-06-15 17:20:39,502 INFO [request_util.py(api_preprocess:11)] - 请求原始数据：{"username":"juno${unique_num2}","password":"juno999999"}
+2023-06-15 17:20:39,503 INFO [request_util.py(api_preprocess:35)] - 请求数据预处理结果：{"username":"juno30310","password":"juno999999"}
+2023-06-15 17:21:00,541 ERROR [request_util.py(api_request:87)] - 接口请求失败：【http://39.100.104.214:8080/login/】【post】
+2023-06-15 17:21:00,542 ERROR [request_util.py(api_request:88)] - Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\Neo\.conda\envs\testing\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001A36CEFD3D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Neo\.conda\envs\testing\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CEFD3D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\repo\TestExample\InterfaceAutoTestWithPytest\util\request_util.py", line 71, in api_request
+    response = requests.post((url+uri), data=request_data, headers=headers, cookies=cookies)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Neo\AppData\Roaming\Python\Python39\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='39.100.104.214', port=8080): Max retries exceeded with url: /login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A36CEFD3D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
