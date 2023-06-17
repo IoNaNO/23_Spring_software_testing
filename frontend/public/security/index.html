@@ -1,0 +1,1971 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        http://124.220.158.211:8848/ ::
+        Arachni Web Application Security Report
+    </title>
+
+    <!--
+        Copyright 2010-2017 Sarosys LLC <http://www.sarosys.com>
+     -->
+
+    
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    
+        <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+    
+        <script type="text/javascript" src="js/lib/d3.min.js"></script>
+    
+        <script type="text/javascript" src="js/lib/c3.min.js"></script>
+    
+        <script type="text/javascript" src="js/helpers.js"></script>
+    
+        <script type="text/javascript" src="js/init.js"></script>
+    
+        <script type="text/javascript" src="js/charts.js"></script>
+    
+        <script type="text/javascript" src="js/configuration.js"></script>
+    
+
+    
+        <link href="css/lib/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    
+        <link href="css/lib/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    
+        <link href="css/lib/c3.css" type="text/css" rel="stylesheet" />
+    
+        <link href="css/main.css" type="text/css" rel="stylesheet" />
+    
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-default" role="navigation">
+    <div class="container">
+        <a class="navbar-brand" href="http://www.arachni-scanner.com">
+            Arachni v1.5.1
+        </a>
+
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#!/summary">
+                        Summary
+
+                        
+                        <b class="fa fa-caret-down"></b>
+                        
+                    </a>
+
+                    
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#!/summary/charts">
+                                Charts
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#!/summary/issues">
+                                Issues
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+
+                
+                <li class="dropdown">
+                    <a href="#!/issues" class="dropdown-toggle">
+                        Issues
+
+                        <span class="badge">
+                            1
+                        </span>
+
+                        <b class="fa fa-caret-down"></b>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        
+                            <li class="dropdown">
+                                <a href="#!/issues/trusted">
+                                    Trusted
+
+                                    <span class="badge">
+                                        1
+                                    </span>
+
+                                    <b class="fa fa-caret-right"></b>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    
+                                        <li class="dropdown">
+                                            <a href="#!/issues/trusted/severity/low">
+                                                Low
+
+                                                <span class="badge">
+                                                    1
+                                                </span>
+
+                                                <b class="fa fa-caret-right"></b>
+                                            </a>
+
+                                            <ul class="dropdown-menu">
+                                                
+                                                    <li class="dropdown">
+                                                        <a href="#!/issues/trusted/severity/low/x_frame_options">
+                                                            Missing &#39;X-Frame-Options&#39; header
+
+                                                            <span class="badge">
+                                                                1
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+
+                
+                <li class="dropdown">
+                    <a href="#!/plugins">
+                        Plugin results
+
+                        <span class="badge">1</span>
+                        <b class="fa fa-caret-down"></b>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        
+                            <li>
+                                <a href="#!/plugins/healthmap">
+                                    Health map
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+
+                <li>
+                    <a href="#!/sitemap">
+                        Sitemap
+
+                        <span class="badge">1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/configuration">Configuration</a>
+                </li>
+            </ul>
+        </div>
+
+        <p class="navbar-text navbar-right">
+            (Found a false positive?
+
+            <a class="navbar-link" href="https://github.com/Arachni/arachni/issues">
+                Please let us know.</a>)
+        </p>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>
+            http://124.220.158.211:8848/
+            <small>Generated on 2023-06-17 11:00:23 +0800</small>
+        </h1>
+    </div>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="summary">
+            <h2>Summary</h2>
+
+<div id="summary-tabs">
+    
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#!/summary/charts">Charts</a>
+            </li>
+            <li>
+                <a href="#!/summary/issues">
+                    Issues
+
+                    <span class="badge">
+                        1
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#!/summary/owasp_top_10">OWASP Top 10</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="summary-charts">
+                <div class="row">
+    <div id="bars">
+        <div class="col-md-12">
+            <h3>
+                Issues
+
+                <small>
+                    by type, trust, and severity
+                </small>
+            </h3>
+
+            <p class="text-muted">
+                (Click on the bars or line points for details on the relevant issues.)
+            </p>
+
+            <div id='chart-issues'>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="pies">
+        <div class="col-md-4">
+            <h3>
+                Severities
+
+                <small>of issues based on possible impact</small>
+            </h3>
+
+            <p class="text-muted">
+                (Click to see relevant <a href="#!/summary/issues/trusted">Trusted</a> issues.)
+            </p>
+
+            <div id="chart-severities">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h3>
+                Elements
+                <small>with issues, by type</small>
+            </h3>
+
+            <p>&nbsp;</p>
+            <div id="chart-elements">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h3>
+                Trust
+                <small>
+                    evaluation
+                    (<a href="#!/summary/issues/trusted">Trusted</a> vs.
+                    <a href="#!/summary/issues/untrusted">Untrusted</a>) of
+                    issues
+                </small>
+            </h3>
+
+            <p class="text-muted">(Click to see relevant issues.)</p>
+
+            <div id="chart-trust">
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+
+            <div class="tab-pane" id="summary-issues">
+                
+    
+
+    <h3>
+        <a
+            id="summary-issues-trusted"
+            href="#!/summary/issues/trusted"
+        >
+
+            Trusted
+
+            <span class="badge">
+                1
+            </span>
+        </a>
+    </h3>
+
+    
+
+        <h4>
+            <a
+                id="summary-issues-trusted-severity-low"
+                href="#!/summary/issues/trusted/severity/low"
+            >
+                Low severity
+
+                <span class="badge">
+                    1
+                </span>
+            </a>
+        </h4>
+
+        <div class="row">
+            
+    <div class="col-md-6">
+        <div class="issue-summary">
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <strong>
+                        <a
+                        id="summary-issues-trusted-severity-low-x_frame_options"
+                        href="#!/summary/issues/trusted/severity/low/x_frame_options"
+                        >
+                            Missing 'X-Frame-Options' header
+
+                            <span class="badge">
+                                1
+                            </span>
+                        </a>
+                    </strong>
+                </div>
+
+                <div class="panel-body">
+                    
+                        <div class="markdown">
+                            
+<p>Clickjacking (User Interface redress attack, UI redress attack, UI redressing)
+is a malicious technique of tricking a Web user into clicking on something different
+from what the user perceives they are clicking on, thus potentially revealing
+confidential information or taking control of their computer while clicking on
+seemingly innocuous web pages.</p>
+
+<p>The server didn’t return an <code>X-Frame-Options</code> header which means that this website
+could be at risk of a clickjacking attack.</p>
+
+<p>The <code>X-Frame-Options</code> HTTP response header can be used to indicate whether or not
+a browser should be allowed to render a page inside a frame or iframe. Sites can
+use this to avoid clickjacking attacks, by ensuring that their content is not
+embedded into other sites.</p>
+
+                        </div>
+                    
+
+                    <table class="table table-condensed">
+                        <tr>
+                            <th></th>
+                            <th>
+                                Vector type
+                            </th>
+
+                            
+
+                            
+                                <th>
+                                    HTTP method
+                                </th>
+                            
+
+                            <th>
+                                Action
+                            </th>
+                        </tr>
+
+                        
+                            <tr>
+                                <td>
+                                    <a class="btn btn-xs btn-info"
+                                       href="#!/issues/trusted/severity/low/x_frame_options/3237010995"
+                                       title="Inspect issue"
+                                    >
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <code>server</code>
+                                </td>
+
+                                
+
+                                
+                                    <td>
+                                        <code>GET</code>
+                                    </td>
+                                
+
+                                <td>
+                                    <a href="http://124.220.158.211:8848/">
+                                        http://124.220.158.211:8848/
+                                    </a>
+                                </td>
+                            </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+
+        <hr/>
+    
+
+
+            </div>
+
+            <div class="tab-pane" id="summary-owasp_top_10">
+                <p>
+    (<a href="https://www.owasp.org/index.php/Top_10_2013-Top_10">About the OWASP Top 10 list</a>)
+</p>
+
+
+
+            </div>
+        </div>
+    
+</div>
+
+        </div>
+
+        <div class="tab-pane" id="configuration">
+            <h2>
+    Configuration
+
+    <a id="configuration-download" class="btn btn-sm btn-primary">
+        Download
+    </a>
+</h2>
+
+<dl class="dl-horizontal">
+    <dt>Version</dt>
+    <dd>1.5.1</dd>
+    <dt>Seed</dt>
+    <dd>9ceb9673bfac1b2971b162cce1e9dc10</dd>
+    <dt>Audit started on</dt>
+    <dd>2023-06-17 10:58:49 +0800</dd>
+    <dt>Audit finished on</dt>
+    <dd>2023-06-17 10:59:05 +0800</dd>
+    <dt>Runtime</dt>
+    <dd>00:00:16</dd>
+</dl>
+
+<h3>
+    <a
+    id="configuration-general"
+    href="#!/configuration/general"
+    >
+        General
+    </a>
+</h3>
+
+<dl class="dl-horizontal">
+    <dt>URL</dt>
+    <dd>
+        <a href="http://124.220.158.211:8848/">
+            http://124.220.158.211:8848/
+        </a>
+    </dd>
+
+    
+        <dt>Checks</dt>
+        <dd>
+            <code>allowed_methods</code>, <code>backdoors</code>, <code>backup_directories</code>, <code>backup_files</code>, <code>captcha</code>, <code>code_injection</code>, <code>code_injection_php_input_wrapper</code>, <code>code_injection_timing</code>, <code>common_admin_interfaces</code>, <code>common_directories</code>, <code>common_files</code>, <code>cookie_set_for_parent_domain</code>, <code>credit_card</code>, <code>csrf</code>, <code>cvs_svn_users</code>, <code>directory_listing</code>, <code>emails</code>, <code>file_inclusion</code>, <code>form_upload</code>, <code>hsts</code>, <code>htaccess_limit</code>, <code>html_objects</code>, <code>http_only_cookies</code>, <code>http_put</code>, <code>insecure_client_access_policy</code>, <code>insecure_cookies</code>, <code>insecure_cors_policy</code>, <code>insecure_cross_domain_policy_access</code>, <code>insecure_cross_domain_policy_headers</code>, <code>interesting_responses</code>, <code>ldap_injection</code>, <code>localstart_asp</code>, <code>mixed_resource</code>, <code>no_sql_injection</code>, <code>no_sql_injection_differential</code>, <code>origin_spoof_access_restriction_bypass</code>, <code>os_cmd_injection</code>, <code>os_cmd_injection_timing</code>, <code>password_autocomplete</code>, <code>path_traversal</code>, <code>private_ip</code>, <code>response_splitting</code>, <code>rfi</code>, <code>session_fixation</code>, <code>source_code_disclosure</code>, <code>sql_injection</code>, <code>sql_injection_differential</code>, <code>sql_injection_timing</code>, <code>ssn</code>, <code>trainer</code>, <code>unencrypted_password_forms</code>, <code>unvalidated_redirect</code>, <code>unvalidated_redirect_dom</code>, <code>webdav</code>, <code>x_frame_options</code>, <code>xpath_injection</code>, <code>xss</code>, <code>xss_dom</code>, <code>xss_dom_script_context</code>, <code>xss_event</code>, <code>xss_path</code>, <code>xss_script_context</code>, <code>xss_tag</code>, <code>xst</code>, <code>xxe</code>
+        </dd>
+    
+
+    
+        <dt>Plugins</dt>
+        <dd>
+            <dl class="dl-horizontal">
+    
+        <dt>
+            <code>autothrottle</code>
+        </dt>
+        <dd>
+            <code>{}</code>
+        </dd>
+    
+        <dt>
+            <code>discovery</code>
+        </dt>
+        <dd>
+            <code>{}</code>
+        </dd>
+    
+        <dt>
+            <code>healthmap</code>
+        </dt>
+        <dd>
+            <code>{}</code>
+        </dd>
+    
+        <dt>
+            <code>timing_attacks</code>
+        </dt>
+        <dd>
+            <code>{}</code>
+        </dd>
+    
+        <dt>
+            <code>uniformity</code>
+        </dt>
+        <dd>
+            <code>{}</code>
+        </dd>
+    
+</dl>
+
+        </dd>
+    
+
+    
+</dl>
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-audit"
+            href="#!/configuration/audit"
+        >
+            Audit
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;parameter_values&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;exclude_vector_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;include_vector_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;link_templates&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;links&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;forms&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;cookies&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;jsons&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;xmls&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;ui_forms&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;ui_inputs&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-browser_cluster"
+            href="#!/configuration/browser_cluster"
+        >
+            Browser cluster
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;local_storage&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;wait_for_elements&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;pool_size&quot;</code>
+            </th>
+            <td>
+                
+                    <code>6</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;job_timeout&quot;</code>
+            </th>
+            <td>
+                
+                    <code>10</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;worker_time_to_live&quot;</code>
+            </th>
+            <td>
+                
+                    <code>100</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;ignore_images&quot;</code>
+            </th>
+            <td>
+                
+                    <code>false</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;screen_width&quot;</code>
+            </th>
+            <td>
+                
+                    <code>1600</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;screen_height&quot;</code>
+            </th>
+            <td>
+                
+                    <code>1200</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-datastore"
+            href="#!/configuration/datastore"
+        >
+            Datastore
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;token&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;d9792c3f26763c162e4d24cb9a4ae41c&quot;</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-http"
+            href="#!/configuration/http"
+        >
+            Http
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;user_agent&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;Arachni/v1.5.1&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;request_timeout&quot;</code>
+            </th>
+            <td>
+                
+                    <code>10000</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;request_redirect_limit&quot;</code>
+            </th>
+            <td>
+                
+                    <code>5</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;request_concurrency&quot;</code>
+            </th>
+            <td>
+                
+                    <code>20</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;request_queue_size&quot;</code>
+            </th>
+            <td>
+                
+                    <code>100</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;request_headers&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;response_max_size&quot;</code>
+            </th>
+            <td>
+                
+                    <code>500000</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;cookies&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;authentication_type&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;auto&quot;</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-input"
+            href="#!/configuration/input"
+        >
+            Input
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;values&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;name&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni_name&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;user&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni_user&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;usr&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni_user&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;pass&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;5543!%arachni_secret&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;txt&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni_text&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;num&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;132&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;amount&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;100&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;mail&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni@email.gr&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;account&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;12&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;id&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;1&quot;</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;default_values&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;name&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni_name&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;user&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni_user&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;usr&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni_user&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;pass&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;5543!%arachni_secret&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;txt&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni_text&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;num&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;132&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;amount&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;100&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;mail&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;arachni@email.gr&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;account&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;12&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;id&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;1&quot;</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;without_defaults&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;force&quot;</code>
+            </th>
+            <td>
+                
+                    <code>false</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-scope"
+            href="#!/configuration/scope"
+        >
+            Scope
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;redundant_path_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;dom_depth_limit&quot;</code>
+            </th>
+            <td>
+                
+                    <code>5</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;exclude_file_extensions&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[&quot;[]&quot;]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;exclude_path_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;exclude_content_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;include_path_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;restrict_paths&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;extend_paths&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;url_rewrites&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+
+        </div>
+
+        
+        <div class="tab-pane" id="issues">
+            <h2>Issues</h2>
+
+<ul class="nav nav-tabs">
+    
+    <li
+        class='active'
+    >
+        <a class="tab-trusted" href="#!/issues/trusted" >
+            Trusted
+
+            <span class="badge">
+                1
+            </span>
+        </a>
+    </li>
+    
+</ul>
+
+<div class="tab-content">
+    
+    <div class="tab-pane active" id="issues-trusted">
+        <p class="well">
+            At the time these issues were logged there were no abnormal
+            interferences or anomalous server behavior.<br/>
+            These issues are considered trusted and accurate.
+        </p>
+
+        <div id="issues-trusted-severities-tabs">
+    <ul class="nav nav-tabs">
+
+        
+            <li class="active" >
+                <a class="tab-severity-low"
+                   href="#!/issues/trusted/severity/low">
+                    Low
+
+                    <span class="badge">
+                        1
+                    </span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+<div class="tab-content">
+    
+        <div class="tab-pane active"
+             id="issues-trusted-severity-low">
+
+            
+                
+
+                <div class="row">
+                    <div class="col-md-10">
+                        <h3>
+                            <a id="issues-trusted-severity-low-x_frame_options"
+                               href="#!/issues/trusted/severity/low/x_frame_options"
+                            >
+                                Missing 'X-Frame-Options' header
+                            </a>
+
+                            <span class="badge">
+                                1
+                            </span>
+
+                            <small>
+                                <span class="label label-default">
+                                    x_frame_options
+                                </span>
+                            </small>
+                        </h3>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="issue-description markdown">
+                                    
+<p>Clickjacking (User Interface redress attack, UI redress attack, UI redressing)
+is a malicious technique of tricking a Web user into clicking on something different
+from what the user perceives they are clicking on, thus potentially revealing
+confidential information or taking control of their computer while clicking on
+seemingly innocuous web pages.</p>
+
+<p>The server didn’t return an <code>X-Frame-Options</code> header which means that this website
+could be at risk of a clickjacking attack.</p>
+
+<p>The <code>X-Frame-Options</code> HTTP response header can be used to indicate whether or not
+a browser should be allowed to render a page inside a frame or iframe. Sites can
+use this to avoid clickjacking attacks, by ensuring that their content is not
+embedded into other sites.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row">
+
+                            
+
+                            
+                            <div class="col-md-12">
+                                <h4>
+                                    <a id="issues-trusted-severity-low-x_frame_options-remedy_guidance"
+                                       href="#!/issues/trusted/severity/low/x_frame_options/remedy_guidance"
+                                    >
+                                        Remediation guidance
+                                    </a>
+                                </h4>
+
+                                <div class="issue-remedy_guidance markdown">
+                                    
+<p>Configure your web server to include an <code>X-Frame-Options</code> header.</p>
+
+                                </div>
+                            </div>
+                            
+
+                            
+                        </div>
+                        
+                    </div>
+
+                    
+                    <div class="col-md-2">
+                        <h4>
+                            <a id="issues-trusted-severity-low-x_frame_options-references"
+                               href="#!/issues/trusted/severity/low/x_frame_options/references"
+                            >
+                                References
+                            </a>
+                        </h4>
+
+                        <hr/>
+
+                        <ul class="list-unstyled">
+                            
+                                <li>
+                                    <a href="http://cwe.mitre.org/data/definitions/693.html">
+                                        CWE-693
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <hr/>
+                                </li>
+                            
+
+                            
+                                <li>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options"> MDN</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="http://tools.ietf.org/html/rfc7034"> RFC</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://www.owasp.org/index.php/Clickjacking"> OWASP</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                
+                    <div id="issues-trusted-severity-low-x_frame_options-3237010995">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#!/issues/trusted/severity/low/x_frame_options/3237010995">
+                            In <code>server</code>
+
+                            
+
+                            
+                                using
+                                <code>GET</code>
+                            
+                        </a>
+
+                        at
+
+                        <a href="http://124.220.158.211:8848/">
+                            http://124.220.158.211:8848/
+                        </a>
+
+                        pointing to
+                        <a href="http://124.220.158.211:8848/">
+                            http://124.220.158.211:8848/
+                        </a>.
+                    </h4>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+
+
+
+
+
+
+<table class="table table-condensed table-fixed">
+    <thead>
+    <tr>
+        
+
+        
+
+        
+            <th>
+                Proof
+
+                <a href="#" rel="tooltip"
+                   title="This string was used to verify the existence of the issue.">
+                    <i class="fa fa-info"></i>
+                </a>
+            </th>
+        
+
+    </tr>
+    </thead>
+    <tr>
+
+        
+
+        
+
+        
+            <td class="wrap">
+                <pre class='code-container'>HTTP/1.1 404 </pre>
+            </td>
+        
+    </tr>
+</table>
+
+
+                        </div>
+                    </div>
+
+                    <div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#!/issues/trusted/severity/low/x_frame_options/3237010995/vector">
+                    <i class="fa fa-link"></i>
+                </a>
+
+                <a data-toggle="collapse" href="#issues-trusted-severity-low-x_frame_options-3237010995-vector">
+                    Vector information
+                </a>
+            </h4>
+        </div>
+        <div id="issues-trusted-severity-low-x_frame_options-3237010995-vector" class="panel-collapse collapse">
+            <div class="panel-body">
+                
+
+<table class="table">
+    <tr>
+        <th>Type</th>
+        <th>In</th>
+        <th>Action</th>
+
+        
+    </tr>
+    <tr>
+        <td><code>server</code></td>
+        <td>
+            <a href="http://124.220.158.211:8848/">
+                http://124.220.158.211:8848/
+            </a>
+        </td>
+        <td>
+            <a href="http://124.220.158.211:8848/">
+                http://124.220.158.211:8848/
+            </a>
+        </td>
+
+        
+    </tr>
+</table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#!/issues/trusted/severity/low/x_frame_options/3237010995/affected_page">
+                    <i class="fa fa-link"></i>
+                </a>
+
+                <a data-toggle="collapse" href="#issues-trusted-severity-low-x_frame_options-3237010995-affected_page">
+                    Affected page:
+
+                    <code>http://124.220.158.211:8848/</code>
+                </a>
+            </h4>
+        </div>
+        <div id="issues-trusted-severity-low-x_frame_options-3237010995-affected_page" class="panel-collapse collapse">
+            <div class="panel-body">
+                
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-low-x_frame_options-3237010995-affected_page-http_request"
+            href="#!/issues/trusted/severity/low/x_frame_options/3237010995/affected_page/http_request">
+                HTTP request
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP request used to retrieve the page.
+        </p>
+
+        <pre class="code-container">GET / HTTP/1.1
+Host: 124.220.158.211:8848
+Accept-Encoding: gzip, deflate
+User-Agent: Arachni/v1.5.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+X-Arachni-Scan-Seed: 9ceb9673bfac1b2971b162cce1e9dc10
+
+</pre>
+    </div>
+
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-low-x_frame_options-3237010995-affected_page-http_response"
+            href="#!/issues/trusted/severity/low/x_frame_options/3237010995/affected_page/http_response">
+                HTTP response
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP response used as the page basis.
+
+            (Binary bodies will not be displayed.)
+        </p>
+
+        
+            <pre class="code-container"><span class="issue-proof-highlight">HTTP/1.1 404 </span>
+Content-Type: text/html;charset=utf-8
+Content-Language: en
+Content-Length: 431
+Date: Sat, 17 Jun 2023 02:59:04 GMT
+
+&lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 404 – Not Found&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 404 – Not Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+        
+    </div>
+</div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#!/issues/trusted/severity/low/x_frame_options/3237010995/referring_page">
+                    <i class="fa fa-link"></i>
+                </a>
+
+                <a data-toggle="collapse" href="#issues-trusted-severity-low-x_frame_options-3237010995-referring_page">
+                    Referring page:
+
+                    <code>http://124.220.158.211:8848/</code>
+                </a>
+            </h4>
+        </div>
+        <div id="issues-trusted-severity-low-x_frame_options-3237010995-referring_page" class="panel-collapse collapse">
+            <div class="panel-body">
+                
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-low-x_frame_options-3237010995-referring_page-http_request"
+            href="#!/issues/trusted/severity/low/x_frame_options/3237010995/referring_page/http_request">
+                HTTP request
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP request used to retrieve the page.
+        </p>
+
+        <pre class="code-container">GET / HTTP/1.1
+Host: 124.220.158.211:8848
+Accept-Encoding: gzip, deflate
+User-Agent: Arachni/v1.5.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+X-Arachni-Scan-Seed: 9ceb9673bfac1b2971b162cce1e9dc10
+
+</pre>
+    </div>
+
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-low-x_frame_options-3237010995-referring_page-http_response"
+            href="#!/issues/trusted/severity/low/x_frame_options/3237010995/referring_page/http_response">
+                HTTP response
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP response used as the page basis.
+
+            (Binary bodies will not be displayed.)
+        </p>
+
+        
+            <pre class="code-container"><span class="issue-proof-highlight">HTTP/1.1 404 </span>
+Content-Type: text/html;charset=utf-8
+Content-Language: en
+Content-Length: 431
+Date: Sat, 17 Jun 2023 02:59:04 GMT
+
+&lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 404 – Not Found&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 404 – Not Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+        
+    </div>
+</div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+                
+            
+        </div>
+    
+</div>
+
+    </div>
+    
+
+    
+</div>
+
+        </div>
+        
+
+        
+        <div class="tab-pane" id="plugins">
+            <h2>Plugin results</h2>
+
+<div id="plugin-tabs">
+    <ul class="nav nav-tabs">
+        
+            <li class="active" >
+                <a href="#!/plugins/healthmap">
+                    Health map
+                </a>
+            </li>
+        
+    </ul>
+
+    <div class="tab-content">
+    
+        <div class="tab-pane active"
+             id="plugins-healthmap">
+
+            <div class="plugin-description markdown">
+                <p>Generates a simple list of safe/unsafe URLs.</p>
+
+            </div>
+
+            <div class="plugin-results">
+                            <style type="text/css">
+                a.without_issues {
+                    color: blue;
+                }
+                a.with_issues {
+                    color: red;
+                }
+            </style>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Total
+                        </dt>
+                        <dd>
+                            1
+                        </dd>
+
+                        <dt>
+                            Without issues
+                        </dt>
+                        <dd>
+                            0
+                        </dd>
+
+                        <dt>
+                            With issues
+                        </dt>
+                        <dd>
+                            1
+                        </dd>
+
+                        <dt>
+                            Issue percentage
+                        </dt>
+                        <dd>
+                            100
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="col-md-10">
+                    <ul class="list-unstyled">
+                    
+
+                        <li>
+                            <a class="text-danger"
+                                href="http://124.220.158.211:8848/">
+                                http://124.220.158.211:8848/
+                            </a>
+                        </li>
+                    
+
+                    </ul>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+
+        </div>
+        
+
+        <div class="tab-pane" id="sitemap">
+            <h2>
+    <a href="#!/sitemap">
+        Sitemap
+
+        <span class="badge">1</span>
+    </a>
+</h2>
+
+<div id="sitemap">
+
+    <table class="table table-condensed">
+        <tr>
+            <th>HTTP status code</th>
+            <th>URL</th>
+        </tr>
+
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://124.220.158.211:8848/">
+                        http://124.220.158.211:8848/
+                    </a>
+                </td>
+            </tr>
+        
+    </table>
+
+</div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

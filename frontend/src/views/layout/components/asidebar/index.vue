@@ -54,6 +54,18 @@
         <span>系统测试</span>
       </template>
     </el-submenu>
+    <el-submenu index="5">
+      <template slot="title">
+        <i class="el-icon-cpu"></i>
+        <span>性能测试</span>
+      </template>
+    </el-submenu>
+    <el-submenu index="6">
+      <template slot="title">
+        <i class="el-icon-cpu"></i>
+        <span><router-link to="/security">安全测试</router-link></span>
+      </template>
+    </el-submenu>
 
   </el-menu>
 </template>

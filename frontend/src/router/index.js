@@ -92,6 +92,10 @@ const routes = [
         path:'/thirteen',
         name:'thirteen',
         component:Thirteen
+      },
+      {
+        path: '/security',
+        beforeEnter() { location.href = 'security/index.html' }
       }
     ]
   }
