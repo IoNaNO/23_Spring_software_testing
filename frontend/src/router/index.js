@@ -96,6 +96,10 @@ const routes = [
       {
         path: '/security',
         beforeEnter() { location.href = 'security/index.html' }
+      },
+      {
+        path: '/press',
+        beforeEnter() { location.href = 'press.html' }
       }
     ]
   }

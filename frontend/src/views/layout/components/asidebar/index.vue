@@ -57,7 +57,7 @@
     <el-submenu index="5">
       <template slot="title">
         <i class="el-icon-cpu"></i>
-        <span>性能测试</span>
+        <span><router-link to="/press">性能测试</router-link></span>
       </template>
     </el-submenu>
     <el-submenu index="6">
