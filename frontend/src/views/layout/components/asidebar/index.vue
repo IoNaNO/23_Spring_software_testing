@@ -39,6 +39,12 @@
         <i class="el-icon-notebook-2"></i>
         <span>单元测试</span>
       </template>
+      <el-menu-item-group>
+
+    <el-menu-item index="/allure-report-1">用户子系统测试</el-menu-item>
+    <el-menu-item index="/calendar">万年历问题</el-menu-item>
+    
+  </el-menu-item-group>
     </el-submenu>
 
     <el-submenu index="3">

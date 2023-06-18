@@ -100,6 +100,10 @@ const routes = [
       {
         path: '/press',
         beforeEnter() { location.href = 'press.html' }
+      },
+      {
+        path: '/allure-report-1',
+        beforeEnter() { location.href = 'allure-report-1/index.html' }
       }
     ]
   }
