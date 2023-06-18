@@ -1,0 +1,116 @@
+{
+  "uid" : "f868bad722d37b64",
+  "name" : "postOrder_03()",
+  "fullName" : "com.ticket.ticketsystem.OrderServiceImplTest.postOrder_03",
+  "historyId" : "c4bc002f7a7609da974bc4808da60dde",
+  "time" : {
+    "start" : 1687097644741,
+    "stop" : 1687097644742,
+    "duration" : 1
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:com.ticket.ticketsystem.OrderServiceImplTest]/[method:postOrder_03()]"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-8VJLA9R"
+  }, {
+    "name" : "thread",
+    "value" : "36536@DESKTOP-8VJLA9R.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "com.ticket.ticketsystem.OrderServiceImplTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.ticket.ticketsystem.OrderServiceImplTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "postOrder_03"
+  }, {
+    "name" : "suite",
+    "value" : "com.ticket.ticketsystem.OrderServiceImplTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a91322a260e6d470",
+      "status" : "passed",
+      "time" : {
+        "start" : 1687097255696,
+        "stop" : 1687097255697,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "f44e92dd917ef9e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1687096269579,
+        "stop" : 1687096269581,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "1f1472d1a8f6e1c5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1687096259444,
+        "stop" : 1687096259446,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "68ad15c5dc3618a6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1687096134847,
+        "stop" : 1687096134849,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "ffb469254a564136",
+      "status" : "passed",
+      "time" : {
+        "start" : 1687096034554,
+        "stop" : 1687096034556,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "7da29a0e9e4fe22",
+      "status" : "passed",
+      "time" : {
+        "start" : 1687095765965,
+        "stop" : 1687095765966,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "dcda30df4af5d98a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1687094803747,
+        "stop" : 1687094803749,
+        "duration" : 2
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f868bad722d37b64.json",
+  "parameterValues" : [ ]
+}

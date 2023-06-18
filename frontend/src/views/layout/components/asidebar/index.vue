@@ -41,9 +41,9 @@
       </template>
       <el-menu-item-group>
 
-    <el-menu-item index="/allure-report-1">用户子系统测试</el-menu-item>
-    <el-menu-item index="/calendar">万年历问题</el-menu-item>
-    
+    <el-menu-item index="/allure-report-1">UserInfoImpl测试</el-menu-item>
+    <el-menu-item index="/allure-report-2">OrderImpl 测试-修复前</el-menu-item>
+    <el-menu-item index="/allure-report-3">OrderImpl 测试-修复后</el-menu-item>
   </el-menu-item-group>
     </el-submenu>
 

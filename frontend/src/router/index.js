@@ -104,6 +104,14 @@ const routes = [
       {
         path: '/allure-report-1',
         beforeEnter() { location.href = 'allure-report-1/index.html' }
+      },
+      {
+        path: '/allure-report-2',
+        beforeEnter() { location.href = 'allure-report-2/index.html' }
+      },
+      {
+        path: '/allure-report-3',
+        beforeEnter() { location.href = 'allure-report-3/index.html' }
       }
     ]
   }
