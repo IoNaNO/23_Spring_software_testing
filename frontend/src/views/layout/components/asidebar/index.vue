@@ -1,12 +1,12 @@
 
 <template>
   <el-menu
-    class="el-menu-vertical-demo"
+     class="el-menu-vertical-demo"
     @open="handleOpen"
     @close="handleClose"
-    background-color="#3498db"
+    background-color="#2c3e50"
     text-color="#ecf0f1"
-    active-text-color="#a9c0d3"
+    active-text-color="#fdcb6e"
     :collapse="isCollapse"
     :default-openeds="openeds"
     router
@@ -100,6 +100,27 @@ methods: {
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
-}
+  .el-submenu__title {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  .el-menu-item {
+    padding: 10px 0;
+    &:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+  }
+  .el-icon-location, .el-icon-notebook-2, .el-icon-data-line, .el-icon-cpu {
+    font-size: 20px;
+    margin-right: 10px;
+  }
 
+  /* 修改链接颜色 */
+  a {
+    color: #ecf0f1 !important;
+    &:hover {
+      color: #fdcb6e !important;
+    }
+  }
+}
 </style>
