@@ -16,7 +16,7 @@ import Ten from '@/views/ten/'
 import Eleven from '@/views/eleven/'
 import Twelve from '@/views/twelve/'
 import Thirteen from '@/views/thirteen/'
-
+import System from '@/views/system/'
 Vue.use(VueRouter)
 
 const routes = [
@@ -112,6 +112,15 @@ const routes = [
       {
         path: '/allure-report-3',
         beforeEnter() { location.href = 'allure-report-3/index.html' }
+      },
+      {
+        path: '/allure-report-4',
+        beforeEnter() { location.href = 'allure-report-4/index.html' }
+      },
+      {
+        path:'/system',
+        name:'system',
+        component:System
       }
     ]
   }

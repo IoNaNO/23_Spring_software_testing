@@ -44,6 +44,7 @@
     <el-menu-item index="/allure-report-1">UserInfoImpl测试</el-menu-item>
     <el-menu-item index="/allure-report-2">OrderImpl 测试-修复前</el-menu-item>
     <el-menu-item index="/allure-report-3">OrderImpl 测试-修复后</el-menu-item>
+    <el-menu-item index="/allure-report-4">SharingImpl测试</el-menu-item>
   </el-menu-item-group>
     </el-submenu>
 
@@ -55,11 +56,15 @@
     </el-submenu>
 
     <el-submenu index="4">
-      <template slot="title">
-        <i class="el-icon-cpu"></i>
-        <span>系统测试</span>
-      </template>
-    </el-submenu>
+  <template slot="title">
+    <i class="el-icon-cpu"></i>
+    <span>系统测试</span>
+  </template>
+  <el-menu-item-group>
+    <el-menu-item index="/system">测试报告</el-menu-item>
+  </el-menu-item-group>
+</el-submenu>
+
     <el-submenu index="5">
       <template slot="title">
         <i class="el-icon-cpu"></i>
