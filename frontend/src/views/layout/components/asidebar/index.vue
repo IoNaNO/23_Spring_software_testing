@@ -69,7 +69,6 @@
   </template>
   <el-menu-item-group>
     <el-menu-item index="/system">测试报告</el-menu-item>
-    <el-menu-item index="/system-repair">测试报告</el-menu-item>
   </el-menu-item-group>
 </el-submenu>
 
