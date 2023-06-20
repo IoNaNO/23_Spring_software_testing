@@ -56,6 +56,11 @@ export default {
     height: 100%;
   }
 }
+.aside::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
 .main {
   background-color: #e9eef3;
 }

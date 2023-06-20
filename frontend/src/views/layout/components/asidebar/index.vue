@@ -124,7 +124,7 @@ methods: {
     padding: 12px 0;
   }
   .el-menu-item {
-    padding: 10px 0;
+    padding: 0;
     &:hover {
       background-color: rgba(255,255,255,0.1);
     }
@@ -136,6 +136,7 @@ methods: {
 
   /* 修改链接颜色 */
   a {
+    text-decoration: none;
     color: #ecf0f1 !important;
     &:hover {
       color: #fdcb6e !important;

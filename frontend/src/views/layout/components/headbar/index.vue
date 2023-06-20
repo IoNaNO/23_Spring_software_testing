@@ -79,7 +79,7 @@ export default {
 .title {
   color: #ffffff; // 设置标题为白色，与背景颜色形成对比
   font-size: 30px !important;
-  font-weight: bold; // 增加字体粗细
+  font-weight:500; // 增加字体粗细
   margin-left: 10px; // 增加左边距，与图标之间留出一些空间
 }
 
