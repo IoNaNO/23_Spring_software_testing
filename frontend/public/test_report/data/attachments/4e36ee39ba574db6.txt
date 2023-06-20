@@ -1,0 +1,7 @@
+[32mINFO    [0m root:test_ticket_module.py:109 接口用例数据：[1.0, '查询不存在场次地点情况', 'http://127.0.0.1:8001', '/histrionics/423413/location/', 'get', '', '"status": 500', '', " {\n   \n   'Accept': '*/*',\n   'Host': '127.0.0.1:8001',\n   'Connection': 'keep-alive'\n}", '']
+[32mINFO    [0m root:request_util.py:72 请求头：{'Accept': '*/*', 'Host': '127.0.0.1:8001', 'Connection': 'keep-alive'}
+[32mINFO    [0m root:request_util.py:11 请求原始数据：/histrionics/423413/location/
+[32mINFO    [0m root:request_util.py:96 接口调用成功！
+[32mINFO    [0m root:request_util.py:97 响应数据：{"timestamp":"2023-06-20T15:39:10.043+00:00","status":500,"error":"Internal Server Error","path":"/histrionics/423413/location/"}
+[32mINFO    [0m root:request_util.py:48 无关联参数提取..
+[32mINFO    [0m root:assert_util.py:12 【"status":500】关键字断言成功【{"timestamp":"2023-06-20T15:39:10.043+00:00","status":500,"error":"Internal Server Error","path":"/histrionics/423413/location/"}】

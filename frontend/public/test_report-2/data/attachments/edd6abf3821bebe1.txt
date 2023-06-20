@@ -1,0 +1,7 @@
+[32mINFO    [0m root:test_ticket_module.py:109 接口用例数据：[2.0, '查询存在场次且有相关地点的情况', 'http://127.0.0.1:8001', '/histrionics/1/location/', 'get', '', '"status": "success"', '', " {\n   \n   'Accept': '*/*',\n   'Host': '127.0.0.1:8001',\n   'Connection': 'keep-alive'\n}", '']
+[32mINFO    [0m root:request_util.py:72 请求头：{'Accept': '*/*', 'Host': '127.0.0.1:8001', 'Connection': 'keep-alive'}
+[32mINFO    [0m root:request_util.py:11 请求原始数据：/histrionics/1/location/
+[32mINFO    [0m root:request_util.py:96 接口调用成功！
+[32mINFO    [0m root:request_util.py:97 响应数据：{"data":{"locationId":4,"name":"中信泰富万达广场(嘉定新城店)","description":"地址：上海市嘉定区胜辛路426号\r\n电话：(021)59513111","image":"https://pic.imgdb.cn/item/63b3c2a3be43e0d30e9e08ed.jpg","locationType":"影院","lat":121.261747,"lng":31.33615},"status":"success"}
+[32mINFO    [0m root:request_util.py:48 无关联参数提取..
+[32mINFO    [0m root:assert_util.py:12 【"status":"success"】关键字断言成功【{"data":{"locationId":4,"name":"中信泰富万达广场(嘉定新城店)","description":"地址：上海市嘉定区胜辛路426号\r\n电话：(021)59513111","image":"https://pic.imgdb.cn/item/63b3c2a3be43e0d30e9e08ed.jpg","locationType":"影院","lat":121.261747,"lng":31.33615},"status":"success"}】

@@ -1,0 +1,8 @@
+[32mINFO    [0m root:test_user_module.py:54 接口用例数据：[1.0, '添加观影人到不存在用户的情况', 'http://127.0.0.1:8000', '/realviewers/', 'post', '{     "user_id": 43293,     "identity_number": "12315",    "name":" 高骏骋"}', '"status": 500', '', "{\n   'Accept': '*/*',\n   'Host': '127.0.0.1:8000',\n   'Connection': 'keep-alive',\n   'Content-type': 'multipart/form-data'\n}", '']
+[32mINFO    [0m root:request_util.py:72 请求头：{'Accept': '*/*', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Content-type': 'multipart/form-data'}
+[32mINFO    [0m root:request_util.py:11 请求原始数据：{'user_id': 43293, 'identity_number': '12315', 'name': ' 高骏骋'}
+[32mINFO    [0m root:request_util.py:81 Before sending: True
+[32mINFO    [0m root:request_util.py:96 接口调用成功！
+[32mINFO    [0m root:request_util.py:97 响应数据：{"timestamp":"2023-06-20T15:39:10.631+00:00","status":500,"error":"Internal Server Error","path":"/realviewers/"}
+[32mINFO    [0m root:request_util.py:48 无关联参数提取..
+[32mINFO    [0m root:assert_util.py:12 【"status":500】关键字断言成功【{"timestamp":"2023-06-20T15:39:10.631+00:00","status":500,"error":"Internal Server Error","path":"/realviewers/"}】

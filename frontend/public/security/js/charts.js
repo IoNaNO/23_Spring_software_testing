@@ -1,9 +1,9 @@
 function index_to_shortname( index ){
-    return ["x_frame_options"][index];
+    return ["interesting_responses","allowed_methods"][index];
 }
 
 function index_to_severity( index ){
-    return {"x_frame_options":"low"}[index_to_shortname(index)];
+    return {"interesting_responses":"informational","allowed_methods":"informational"}[index_to_shortname(index)];
 }
 
 function renderCharts() {
@@ -14,9 +14,9 @@ function renderCharts() {
         bindto: '#chart-issues',
         data: {
             columns: [
-                ["Trusted",1],
-                ["Untrusted",0],
-                ["Severity",2]
+                ["Trusted",2,1],
+                ["Untrusted",0,0],
+                ["Severity",1,1]
             ],
             axes: {
                 Severity: 'y2'
@@ -41,11 +41,11 @@ function renderCharts() {
                 goToLocation( location );
             }
         },
-        regions: [{"class":"severity-low","start":0}],
+        regions: [{"class":"severity-informational","start":0}],
         axis: {
             x: {
                 type: 'category',
-                categories: ["Missing 'X-Frame-Options' header"],
+                categories: ["Interesting response","Allowed HTTP methods"],
                 tick: {
                     rotate: 15
                 }
@@ -83,7 +83,7 @@ function renderCharts() {
         bindto: '#chart-trust',
         data: {
             type: 'pie',
-            columns: [["Trusted",1],["Untrusted",0]]
+            columns: [["Trusted",3],["Untrusted",0]]
         },
         pie: {
             onclick: function (d) { goToLocation( 'summary/issues/' + d.id.toLowerCase() ) }
@@ -97,7 +97,7 @@ function renderCharts() {
         bindto: '#chart-elements',
         data: {
             type: 'pie',
-            columns: [["server",1]]
+            columns: [["server",3]]
         }
     });
 
@@ -105,7 +105,7 @@ function renderCharts() {
         bindto: '#chart-severities',
         data: {
             type: 'pie',
-            columns: [["low",1]]
+            columns: [["informational",3]]
         },
         color: {
             pattern: [ '#d62728', '#ff7f0e', '#ffbb78', '#1f77b4' ]

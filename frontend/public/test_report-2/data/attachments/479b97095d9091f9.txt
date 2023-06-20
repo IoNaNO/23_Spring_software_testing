@@ -1,0 +1,8 @@
+[32mINFO    [0m root:test_user_module.py:39 接口用例数据：[3.0, '提供错误的密码进行访问令牌请求', 'http://127.0.0.1:8000', '/users/token/', 'post', '{\n    "user_name": "NeoChen",\n    "password": "36ye2233333"\n}', '"status": 403', '', "{ \n   'Accept': '*/*',\n   'Host': '127.0.0.1:8000',\n   'Connection': 'keep-alive',\n   'Content-type': 'multipart/form-data'\n}", '']
+[32mINFO    [0m root:request_util.py:72 请求头：{'Accept': '*/*', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Content-type': 'multipart/form-data'}
+[32mINFO    [0m root:request_util.py:11 请求原始数据：{'user_name': 'NeoChen', 'password': '36ye2233333'}
+[32mINFO    [0m root:request_util.py:81 Before sending: True
+[32mINFO    [0m root:request_util.py:96 接口调用成功！
+[32mINFO    [0m root:request_util.py:97 响应数据：{"timestamp":"2023-06-20T16:16:47.865+00:00","status":403,"error":"Forbidden","path":"/users/token/"}
+[32mINFO    [0m root:request_util.py:48 无关联参数提取..
+[32mINFO    [0m root:assert_util.py:12 【"status":403】关键字断言成功【{"timestamp":"2023-06-20T16:16:47.865+00:00","status":403,"error":"Forbidden","path":"/users/token/"}】

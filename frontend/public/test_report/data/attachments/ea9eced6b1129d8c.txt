@@ -1,0 +1,11 @@
+[32mINFO    [0m root:test_ticket_module.py:64 接口用例数据：[2.0, '查询不存在的门票详细信息', 'http://127.0.0.1:8001', '/users/1/tickets/99/', 'get', '', '"status": ”error“', '', " {\n   \n   'Accept': '*/*',\n   'Host': '127.0.0.1:8001',\n   'Connection': 'keep-alive'\n}", '']
+[32mINFO    [0m root:request_util.py:72 请求头：{'Accept': '*/*', 'Host': '127.0.0.1:8001', 'Connection': 'keep-alive'}
+[32mINFO    [0m root:request_util.py:11 请求原始数据：/users/1/tickets/99/
+[32mINFO    [0m root:request_util.py:96 接口调用成功！
+[32mINFO    [0m root:request_util.py:97 响应数据：{"timestamp":"2023-06-20T15:39:08.529+00:00","status":500,"error":"Internal Server Error","path":"/users/1/tickets/99/"}
+[32mINFO    [0m root:request_util.py:48 无关联参数提取..
+[1m[31mERROR   [0m root:assert_util.py:14 【"status":”error“】关键字断言失败【{"timestamp":"2023-06-20T15:39:08.529+00:00","status":500,"error":"Internal Server Error","path":"/users/1/tickets/99/"}】
+[1m[31mERROR   [0m root:assert_util.py:15 Traceback (most recent call last):
+  File "D:\repo\23_Spring_software_testing\InterfaceAutoTestWithPytest\util\assert_util.py", line 11, in assert_keyword
+    assert keyword.strip() in response.text
+AssertionError

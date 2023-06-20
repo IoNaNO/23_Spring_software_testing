@@ -1,0 +1,7 @@
+[32mINFO    [0m root:test_sharing_module.py:37 接口用例数据：[1.0, '分享ID在数据库中不存在', 'http://127.0.0.1:8002', '/sharings/1/', 'get', '', '"status": "error"', '', " {\n   \n   'Accept': '*/*',\n   'Host': '127.0.0.1:8002',\n   'Connection': 'keep-alive'\n}", '']
+[32mINFO    [0m root:request_util.py:72 请求头：{'Accept': '*/*', 'Host': '127.0.0.1:8002', 'Connection': 'keep-alive'}
+[32mINFO    [0m root:request_util.py:11 请求原始数据：/sharings/1/
+[32mINFO    [0m root:request_util.py:96 接口调用成功！
+[32mINFO    [0m root:request_util.py:97 响应数据：{"message":"_id 为1 的 sharing 不存在","status":"error"}
+[32mINFO    [0m root:request_util.py:48 无关联参数提取..
+[32mINFO    [0m root:assert_util.py:12 【"status":"error"】关键字断言成功【{"message":"_id 为1 的 sharing 不存在","status":"error"}】

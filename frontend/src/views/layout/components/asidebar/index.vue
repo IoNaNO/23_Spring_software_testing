@@ -53,6 +53,12 @@
         <i class="el-icon-data-line"></i>
         <span>集成测试</span>
       </template>
+      <el-menu-item-group>
+
+<el-menu-item index="/test_report">集成测试报告</el-menu-item>
+<el-menu-item index="/test_report-2">集成测试报告-修复后</el-menu-item>
+
+</el-menu-item-group>
     </el-submenu>
 
     <el-submenu index="4">

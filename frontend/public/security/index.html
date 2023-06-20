@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <title>
-        http://124.220.158.211:8848/ ::
+        http://124.220.158.211:8002/ ::
         Arachni Web Application Security Report
     </title>
 
@@ -83,7 +83,7 @@
                         Issues
 
                         <span class="badge">
-                            1
+                            3
                         </span>
 
                         <b class="fa fa-caret-down"></b>
@@ -96,7 +96,7 @@
                                     Trusted
 
                                     <span class="badge">
-                                        1
+                                        3
                                     </span>
 
                                     <b class="fa fa-caret-right"></b>
@@ -105,11 +105,11 @@
                                 <ul class="dropdown-menu">
                                     
                                         <li class="dropdown">
-                                            <a href="#!/issues/trusted/severity/low">
-                                                Low
+                                            <a href="#!/issues/trusted/severity/informational">
+                                                Informational
 
                                                 <span class="badge">
-                                                    1
+                                                    3
                                                 </span>
 
                                                 <b class="fa fa-caret-right"></b>
@@ -118,8 +118,18 @@
                                             <ul class="dropdown-menu">
                                                 
                                                     <li class="dropdown">
-                                                        <a href="#!/issues/trusted/severity/low/x_frame_options">
-                                                            Missing &#39;X-Frame-Options&#39; header
+                                                        <a href="#!/issues/trusted/severity/informational/interesting_responses">
+                                                            Interesting response
+
+                                                            <span class="badge">
+                                                                2
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li class="dropdown">
+                                                        <a href="#!/issues/trusted/severity/informational/allowed_methods">
+                                                            Allowed HTTP methods
 
                                                             <span class="badge">
                                                                 1
@@ -184,8 +194,8 @@
 <div class="container-fluid">
     <div class="page-header">
         <h1>
-            http://124.220.158.211:8848/
-            <small>Generated on 2023-06-17 11:00:23 +0800</small>
+            http://124.220.158.211:8002/
+            <small>Generated on 2023-06-21 00:36:42 +0800</small>
         </h1>
     </div>
 
@@ -204,7 +214,7 @@
                     Issues
 
                     <span class="badge">
-                        1
+                        3
                     </span>
                 </a>
             </li>
@@ -298,7 +308,7 @@
             Trusted
 
             <span class="badge">
-                1
+                3
             </span>
         </a>
     </h3>
@@ -307,13 +317,13 @@
 
         <h4>
             <a
-                id="summary-issues-trusted-severity-low"
-                href="#!/summary/issues/trusted/severity/low"
+                id="summary-issues-trusted-severity-informational"
+                href="#!/summary/issues/trusted/severity/informational"
             >
-                Low severity
+                Informational severity
 
                 <span class="badge">
-                    1
+                    3
                 </span>
             </a>
         </h4>
@@ -327,13 +337,13 @@
                 <div class="panel-heading">
                     <strong>
                         <a
-                        id="summary-issues-trusted-severity-low-x_frame_options"
-                        href="#!/summary/issues/trusted/severity/low/x_frame_options"
+                        id="summary-issues-trusted-severity-informational-interesting_responses"
+                        href="#!/summary/issues/trusted/severity/informational/interesting_responses"
                         >
-                            Missing 'X-Frame-Options' header
+                            Interesting response
 
                             <span class="badge">
-                                1
+                                2
                             </span>
                         </a>
                     </strong>
@@ -343,19 +353,9 @@
                     
                         <div class="markdown">
                             
-<p>Clickjacking (User Interface redress attack, UI redress attack, UI redressing)
-is a malicious technique of tricking a Web user into clicking on something different
-from what the user perceives they are clicking on, thus potentially revealing
-confidential information or taking control of their computer while clicking on
-seemingly innocuous web pages.</p>
-
-<p>The server didn’t return an <code>X-Frame-Options</code> header which means that this website
-could be at risk of a clickjacking attack.</p>
-
-<p>The <code>X-Frame-Options</code> HTTP response header can be used to indicate whether or not
-a browser should be allowed to render a page inside a frame or iframe. Sites can
-use this to avoid clickjacking attacks, by ensuring that their content is not
-embedded into other sites.</p>
+<p>The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.</p>
 
                         </div>
                     
@@ -384,7 +384,7 @@ embedded into other sites.</p>
                             <tr>
                                 <td>
                                     <a class="btn btn-xs btn-info"
-                                       href="#!/issues/trusted/severity/low/x_frame_options/3237010995"
+                                       href="#!/issues/trusted/severity/informational/interesting_responses/4032040979"
                                        title="Inspect issue"
                                     >
                                         <i class="fa fa-eye"></i>
@@ -398,13 +398,135 @@ embedded into other sites.</p>
 
                                 
                                     <td>
-                                        <code>GET</code>
+                                        <code>TRACE</code>
                                     </td>
                                 
 
                                 <td>
-                                    <a href="http://124.220.158.211:8848/">
-                                        http://124.220.158.211:8848/
+                                    <a href="http://124.220.158.211:8002/">
+                                        http://124.220.158.211:8002/
+                                    </a>
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a class="btn btn-xs btn-info"
+                                       href="#!/issues/trusted/severity/informational/interesting_responses/3345449079"
+                                       title="Inspect issue"
+                                    >
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <code>server</code>
+                                </td>
+
+                                
+
+                                
+                                    <td>
+                                        <code>PUT</code>
+                                    </td>
+                                
+
+                                <td>
+                                    <a href="http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef">
+                                        http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef
+                                    </a>
+                                </td>
+                            </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="issue-summary">
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <strong>
+                        <a
+                        id="summary-issues-trusted-severity-informational-allowed_methods"
+                        href="#!/summary/issues/trusted/severity/informational/allowed_methods"
+                        >
+                            Allowed HTTP methods
+
+                            <span class="badge">
+                                1
+                            </span>
+                        </a>
+                    </strong>
+                </div>
+
+                <div class="panel-body">
+                    
+                        <div class="markdown">
+                            
+<p>There are a number of HTTP methods that can be used on a webserver (<code>OPTIONS</code>,
+<code>HEAD</code>, <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code> etc.).  Each of these methods perform a
+different function and each have an associated level of risk when their use is
+permitted on the webserver.</p>
+
+<p>A client can use the <code>OPTIONS</code> method within a request to query a server to
+determine which methods are allowed.</p>
+
+<p>Cyber-criminals will almost always perform this simple test as it will give a
+very quick indication of any high-risk methods being permitted by the server.</p>
+
+<p>Arachni discovered that several methods are supported by the server.</p>
+
+                        </div>
+                    
+
+                    <table class="table table-condensed">
+                        <tr>
+                            <th></th>
+                            <th>
+                                Vector type
+                            </th>
+
+                            
+
+                            
+                                <th>
+                                    HTTP method
+                                </th>
+                            
+
+                            <th>
+                                Action
+                            </th>
+                        </tr>
+
+                        
+                            <tr>
+                                <td>
+                                    <a class="btn btn-xs btn-info"
+                                       href="#!/issues/trusted/severity/informational/allowed_methods/971111291"
+                                       title="Inspect issue"
+                                    >
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <code>server</code>
+                                </td>
+
+                                
+
+                                
+                                    <td>
+                                        <code>OPTIONS</code>
+                                    </td>
+                                
+
+                                <td>
+                                    <a href="http://124.220.158.211:8002/">
+                                        http://124.220.158.211:8002/
                                     </a>
                                 </td>
                             </tr>
@@ -451,13 +573,13 @@ embedded into other sites.</p>
     <dt>Version</dt>
     <dd>1.5.1</dd>
     <dt>Seed</dt>
-    <dd>9ceb9673bfac1b2971b162cce1e9dc10</dd>
+    <dd>424d55c69bf710473c7bc429f8b08fef</dd>
     <dt>Audit started on</dt>
-    <dd>2023-06-17 10:58:49 +0800</dd>
+    <dd>2023-06-21 00:35:06 +0800</dd>
     <dt>Audit finished on</dt>
-    <dd>2023-06-17 10:59:05 +0800</dd>
+    <dd>2023-06-21 00:35:24 +0800</dd>
     <dt>Runtime</dt>
-    <dd>00:00:16</dd>
+    <dd>00:00:18</dd>
 </dl>
 
 <h3>
@@ -472,8 +594,8 @@ embedded into other sites.</p>
 <dl class="dl-horizontal">
     <dt>URL</dt>
     <dd>
-        <a href="http://124.220.158.211:8848/">
-            http://124.220.158.211:8848/
+        <a href="http://124.220.158.211:8002/">
+            http://124.220.158.211:8002/
         </a>
     </dd>
 
@@ -805,7 +927,7 @@ embedded into other sites.</p>
             </th>
             <td>
                 
-                    <code>&quot;d9792c3f26763c162e4d24cb9a4ae41c&quot;</code>
+                    <code>&quot;76edd0980f4463d5c6005f5cf65980ac&quot;</code>
                 
             </td>
         </tr>
@@ -1371,7 +1493,7 @@ embedded into other sites.</p>
             Trusted
 
             <span class="badge">
-                1
+                3
             </span>
         </a>
     </li>
@@ -1392,12 +1514,12 @@ embedded into other sites.</p>
 
         
             <li class="active" >
-                <a class="tab-severity-low"
-                   href="#!/issues/trusted/severity/low">
-                    Low
+                <a class="tab-severity-informational"
+                   href="#!/issues/trusted/severity/informational">
+                    Informational
 
                     <span class="badge">
-                        1
+                        3
                     </span>
                 </a>
             </li>
@@ -1408,7 +1530,7 @@ embedded into other sites.</p>
 <div class="tab-content">
     
         <div class="tab-pane active"
-             id="issues-trusted-severity-low">
+             id="issues-trusted-severity-informational">
 
             
                 
@@ -1416,19 +1538,19 @@ embedded into other sites.</p>
                 <div class="row">
                     <div class="col-md-10">
                         <h3>
-                            <a id="issues-trusted-severity-low-x_frame_options"
-                               href="#!/issues/trusted/severity/low/x_frame_options"
+                            <a id="issues-trusted-severity-informational-interesting_responses"
+                               href="#!/issues/trusted/severity/informational/interesting_responses"
                             >
-                                Missing 'X-Frame-Options' header
+                                Interesting response
                             </a>
 
                             <span class="badge">
-                                1
+                                2
                             </span>
 
                             <small>
                                 <span class="label label-default">
-                                    x_frame_options
+                                    interesting_responses
                                 </span>
                             </small>
                         </h3>
@@ -1437,57 +1559,22 @@ embedded into other sites.</p>
                             <div class="col-md-12">
                                 <div class="issue-description markdown">
                                     
-<p>Clickjacking (User Interface redress attack, UI redress attack, UI redressing)
-is a malicious technique of tricking a Web user into clicking on something different
-from what the user perceives they are clicking on, thus potentially revealing
-confidential information or taking control of their computer while clicking on
-seemingly innocuous web pages.</p>
-
-<p>The server didn’t return an <code>X-Frame-Options</code> header which means that this website
-could be at risk of a clickjacking attack.</p>
-
-<p>The <code>X-Frame-Options</code> HTTP response header can be used to indicate whether or not
-a browser should be allowed to render a page inside a frame or iframe. Sites can
-use this to avoid clickjacking attacks, by ensuring that their content is not
-embedded into other sites.</p>
+<p>The server responded with a non 200 (OK) nor 404 (Not Found) status code.
+This is a non-issue, however exotic HTTP response status codes can provide useful
+insights into the behavior of the web application and assist with the penetration test.</p>
 
                                 </div>
                             </div>
                         </div>
 
-                        
-                        <div class="row">
-
-                            
-
-                            
-                            <div class="col-md-12">
-                                <h4>
-                                    <a id="issues-trusted-severity-low-x_frame_options-remedy_guidance"
-                                       href="#!/issues/trusted/severity/low/x_frame_options/remedy_guidance"
-                                    >
-                                        Remediation guidance
-                                    </a>
-                                </h4>
-
-                                <div class="issue-remedy_guidance markdown">
-                                    
-<p>Configure your web server to include an <code>X-Frame-Options</code> header.</p>
-
-                                </div>
-                            </div>
-                            
-
-                            
-                        </div>
                         
                     </div>
 
                     
                     <div class="col-md-2">
                         <h4>
-                            <a id="issues-trusted-severity-low-x_frame_options-references"
-                               href="#!/issues/trusted/severity/low/x_frame_options/references"
+                            <a id="issues-trusted-severity-informational-interesting_responses-references"
+                               href="#!/issues/trusted/severity/informational/interesting_responses/references"
                             >
                                 References
                             </a>
@@ -1497,28 +1584,10 @@ embedded into other sites.</p>
 
                         <ul class="list-unstyled">
                             
-                                <li>
-                                    <a href="http://cwe.mitre.org/data/definitions/693.html">
-                                        CWE-693
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <hr/>
-                                </li>
-                            
 
                             
                                 <li>
-                                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options"> MDN</a>
-                                </li>
-                            
-                                <li>
-                                    <a href="http://tools.ietf.org/html/rfc7034"> RFC</a>
-                                </li>
-                            
-                                <li>
-                                    <a href="https://www.owasp.org/index.php/Clickjacking"> OWASP</a>
+                                    <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"> w3.org</a>
                                 </li>
                             
                         </ul>
@@ -1527,32 +1596,32 @@ embedded into other sites.</p>
                 </div>
 
                 
-                    <div id="issues-trusted-severity-low-x_frame_options-3237010995">
+                    <div id="issues-trusted-severity-informational-interesting_responses-4032040979">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a href="#!/issues/trusted/severity/low/x_frame_options/3237010995">
+                        <a href="#!/issues/trusted/severity/informational/interesting_responses/4032040979">
                             In <code>server</code>
 
                             
 
                             
                                 using
-                                <code>GET</code>
+                                <code>TRACE</code>
                             
                         </a>
 
                         at
 
-                        <a href="http://124.220.158.211:8848/">
-                            http://124.220.158.211:8848/
+                        <a href="http://124.220.158.211:8002/">
+                            http://124.220.158.211:8002/
                         </a>
 
                         pointing to
-                        <a href="http://124.220.158.211:8848/">
-                            http://124.220.158.211:8848/
+                        <a href="http://124.220.158.211:8002/">
+                            http://124.220.158.211:8002/
                         </a>.
                     </h4>
                 </div>
@@ -1596,7 +1665,7 @@ embedded into other sites.</p>
 
         
             <td class="wrap">
-                <pre class='code-container'>HTTP/1.1 404 </pre>
+                <pre class='code-container'>HTTP/1.1 405 </pre>
             </td>
         
     </tr>
@@ -1610,16 +1679,16 @@ embedded into other sites.</p>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a href="#!/issues/trusted/severity/low/x_frame_options/3237010995/vector">
+                <a href="#!/issues/trusted/severity/informational/interesting_responses/4032040979/vector">
                     <i class="fa fa-link"></i>
                 </a>
 
-                <a data-toggle="collapse" href="#issues-trusted-severity-low-x_frame_options-3237010995-vector">
+                <a data-toggle="collapse" href="#issues-trusted-severity-informational-interesting_responses-4032040979-vector">
                     Vector information
                 </a>
             </h4>
         </div>
-        <div id="issues-trusted-severity-low-x_frame_options-3237010995-vector" class="panel-collapse collapse">
+        <div id="issues-trusted-severity-informational-interesting_responses-4032040979-vector" class="panel-collapse collapse">
             <div class="panel-body">
                 
 
@@ -1634,13 +1703,13 @@ embedded into other sites.</p>
     <tr>
         <td><code>server</code></td>
         <td>
-            <a href="http://124.220.158.211:8848/">
-                http://124.220.158.211:8848/
+            <a href="http://124.220.158.211:8002/">
+                http://124.220.158.211:8002/
             </a>
         </td>
         <td>
-            <a href="http://124.220.158.211:8848/">
-                http://124.220.158.211:8848/
+            <a href="http://124.220.158.211:8002/">
+                http://124.220.158.211:8002/
             </a>
         </td>
 
@@ -1655,18 +1724,18 @@ embedded into other sites.</p>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a href="#!/issues/trusted/severity/low/x_frame_options/3237010995/affected_page">
+                <a href="#!/issues/trusted/severity/informational/interesting_responses/4032040979/affected_page">
                     <i class="fa fa-link"></i>
                 </a>
 
-                <a data-toggle="collapse" href="#issues-trusted-severity-low-x_frame_options-3237010995-affected_page">
+                <a data-toggle="collapse" href="#issues-trusted-severity-informational-interesting_responses-4032040979-affected_page">
                     Affected page:
 
-                    <code>http://124.220.158.211:8848/</code>
+                    <code>http://124.220.158.211:8002/</code>
                 </a>
             </h4>
         </div>
-        <div id="issues-trusted-severity-low-x_frame_options-3237010995-affected_page" class="panel-collapse collapse">
+        <div id="issues-trusted-severity-informational-interesting_responses-4032040979-affected_page" class="panel-collapse collapse">
             <div class="panel-body">
                 
 
@@ -1678,8 +1747,8 @@ embedded into other sites.</p>
     <div class="col-md-6">
         <strong>
             <a
-            id="issues-trusted-severity-low-x_frame_options-3237010995-affected_page-http_request"
-            href="#!/issues/trusted/severity/low/x_frame_options/3237010995/affected_page/http_request">
+            id="issues-trusted-severity-informational-interesting_responses-4032040979-affected_page-http_request"
+            href="#!/issues/trusted/severity/informational/interesting_responses/4032040979/affected_page/http_request">
                 HTTP request
             </a>
         </strong>
@@ -1688,13 +1757,13 @@ embedded into other sites.</p>
             Raw HTTP request used to retrieve the page.
         </p>
 
-        <pre class="code-container">GET / HTTP/1.1
-Host: 124.220.158.211:8848
+        <pre class="code-container">TRACE / HTTP/1.1
+Host: 124.220.158.211:8002
 Accept-Encoding: gzip, deflate
 User-Agent: Arachni/v1.5.1
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.8,he;q=0.6
-X-Arachni-Scan-Seed: 9ceb9673bfac1b2971b162cce1e9dc10
+X-Arachni-Scan-Seed: 424d55c69bf710473c7bc429f8b08fef
 
 </pre>
     </div>
@@ -1702,8 +1771,8 @@ X-Arachni-Scan-Seed: 9ceb9673bfac1b2971b162cce1e9dc10
     <div class="col-md-6">
         <strong>
             <a
-            id="issues-trusted-severity-low-x_frame_options-3237010995-affected_page-http_response"
-            href="#!/issues/trusted/severity/low/x_frame_options/3237010995/affected_page/http_response">
+            id="issues-trusted-severity-informational-interesting_responses-4032040979-affected_page-http_response"
+            href="#!/issues/trusted/severity/informational/interesting_responses/4032040979/affected_page/http_response">
                 HTTP response
             </a>
         </strong>
@@ -1715,13 +1784,14 @@ X-Arachni-Scan-Seed: 9ceb9673bfac1b2971b162cce1e9dc10
         </p>
 
         
-            <pre class="code-container"><span class="issue-proof-highlight">HTTP/1.1 404 </span>
+            <pre class="code-container"><span class="issue-proof-highlight">HTTP/1.1 405 </span>
+Allow: HEAD, DELETE, POST, GET, OPTIONS, PUT
 Content-Type: text/html;charset=utf-8
 Content-Language: en
-Content-Length: 431
-Date: Sat, 17 Jun 2023 02:59:04 GMT
+Content-Length: 449
+Date: Tue, 20 Jun 2023 16:35:24 GMT
 
-&lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 404 – Not Found&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 404 – Not Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+&lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 405 – Method Not Allowed&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 405 – Method Not Allowed&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</pre>
         
     </div>
 </div>
@@ -1736,18 +1806,18 @@ Date: Sat, 17 Jun 2023 02:59:04 GMT
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a href="#!/issues/trusted/severity/low/x_frame_options/3237010995/referring_page">
+                <a href="#!/issues/trusted/severity/informational/interesting_responses/4032040979/referring_page">
                     <i class="fa fa-link"></i>
                 </a>
 
-                <a data-toggle="collapse" href="#issues-trusted-severity-low-x_frame_options-3237010995-referring_page">
+                <a data-toggle="collapse" href="#issues-trusted-severity-informational-interesting_responses-4032040979-referring_page">
                     Referring page:
 
-                    <code>http://124.220.158.211:8848/</code>
+                    <code>http://124.220.158.211:8002/</code>
                 </a>
             </h4>
         </div>
-        <div id="issues-trusted-severity-low-x_frame_options-3237010995-referring_page" class="panel-collapse collapse">
+        <div id="issues-trusted-severity-informational-interesting_responses-4032040979-referring_page" class="panel-collapse collapse">
             <div class="panel-body">
                 
 
@@ -1759,8 +1829,8 @@ Date: Sat, 17 Jun 2023 02:59:04 GMT
     <div class="col-md-6">
         <strong>
             <a
-            id="issues-trusted-severity-low-x_frame_options-3237010995-referring_page-http_request"
-            href="#!/issues/trusted/severity/low/x_frame_options/3237010995/referring_page/http_request">
+            id="issues-trusted-severity-informational-interesting_responses-4032040979-referring_page-http_request"
+            href="#!/issues/trusted/severity/informational/interesting_responses/4032040979/referring_page/http_request">
                 HTTP request
             </a>
         </strong>
@@ -1770,12 +1840,12 @@ Date: Sat, 17 Jun 2023 02:59:04 GMT
         </p>
 
         <pre class="code-container">GET / HTTP/1.1
-Host: 124.220.158.211:8848
+Host: 124.220.158.211:8002
 Accept-Encoding: gzip, deflate
 User-Agent: Arachni/v1.5.1
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.8,he;q=0.6
-X-Arachni-Scan-Seed: 9ceb9673bfac1b2971b162cce1e9dc10
+X-Arachni-Scan-Seed: 424d55c69bf710473c7bc429f8b08fef
 
 </pre>
     </div>
@@ -1783,8 +1853,8 @@ X-Arachni-Scan-Seed: 9ceb9673bfac1b2971b162cce1e9dc10
     <div class="col-md-6">
         <strong>
             <a
-            id="issues-trusted-severity-low-x_frame_options-3237010995-referring_page-http_response"
-            href="#!/issues/trusted/severity/low/x_frame_options/3237010995/referring_page/http_response">
+            id="issues-trusted-severity-informational-interesting_responses-4032040979-referring_page-http_response"
+            href="#!/issues/trusted/severity/informational/interesting_responses/4032040979/referring_page/http_response">
                 HTTP response
             </a>
         </strong>
@@ -1796,13 +1866,756 @@ X-Arachni-Scan-Seed: 9ceb9673bfac1b2971b162cce1e9dc10
         </p>
 
         
-            <pre class="code-container"><span class="issue-proof-highlight">HTTP/1.1 404 </span>
-Content-Type: text/html;charset=utf-8
-Content-Language: en
-Content-Length: 431
-Date: Sat, 17 Jun 2023 02:59:04 GMT
+            <pre class="code-container">HTTP/1.1 403 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Content-Length: 275
+Date: Tue, 20 Jun 2023 16:35:24 GMT
 
-&lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 404 – Not Found&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 404 – Not Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id=&#39;created&#39;&gt;Tue Jun 20 16:35:24 GMT 2023&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Forbidden, status=403).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+        
+    </div>
+</div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+                
+                    <div id="issues-trusted-severity-informational-interesting_responses-3345449079">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#!/issues/trusted/severity/informational/interesting_responses/3345449079">
+                            In <code>server</code>
+
+                            
+
+                            
+                                using
+                                <code>PUT</code>
+                            
+                        </a>
+
+                        at
+
+                        <a href="http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef">
+                            http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef
+                        </a>
+
+                        pointing to
+                        <a href="http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef">
+                            http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef
+                        </a>.
+                    </h4>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+
+
+
+
+
+
+<table class="table table-condensed table-fixed">
+    <thead>
+    <tr>
+        
+
+        
+
+        
+            <th>
+                Proof
+
+                <a href="#" rel="tooltip"
+                   title="This string was used to verify the existence of the issue.">
+                    <i class="fa fa-info"></i>
+                </a>
+            </th>
+        
+
+    </tr>
+    </thead>
+    <tr>
+
+        
+
+        
+
+        
+            <td class="wrap">
+                <pre class='code-container'>HTTP/1.1 100 </pre>
+            </td>
+        
+    </tr>
+</table>
+
+
+                        </div>
+                    </div>
+
+                    <div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#!/issues/trusted/severity/informational/interesting_responses/3345449079/vector">
+                    <i class="fa fa-link"></i>
+                </a>
+
+                <a data-toggle="collapse" href="#issues-trusted-severity-informational-interesting_responses-3345449079-vector">
+                    Vector information
+                </a>
+            </h4>
+        </div>
+        <div id="issues-trusted-severity-informational-interesting_responses-3345449079-vector" class="panel-collapse collapse">
+            <div class="panel-body">
+                
+
+<table class="table">
+    <tr>
+        <th>Type</th>
+        <th>In</th>
+        <th>Action</th>
+
+        
+    </tr>
+    <tr>
+        <td><code>server</code></td>
+        <td>
+            <a href="http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef">
+                http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef
+            </a>
+        </td>
+        <td>
+            <a href="http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef">
+                http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef
+            </a>
+        </td>
+
+        
+    </tr>
+</table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#!/issues/trusted/severity/informational/interesting_responses/3345449079/affected_page">
+                    <i class="fa fa-link"></i>
+                </a>
+
+                <a data-toggle="collapse" href="#issues-trusted-severity-informational-interesting_responses-3345449079-affected_page">
+                    Affected page:
+
+                    <code>http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef</code>
+                </a>
+            </h4>
+        </div>
+        <div id="issues-trusted-severity-informational-interesting_responses-3345449079-affected_page" class="panel-collapse collapse">
+            <div class="panel-body">
+                
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-informational-interesting_responses-3345449079-affected_page-http_request"
+            href="#!/issues/trusted/severity/informational/interesting_responses/3345449079/affected_page/http_request">
+                HTTP request
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP request used to retrieve the page.
+        </p>
+
+        <pre class="code-container">PUT /Arachni-424d55c69bf710473c7bc429f8b08fef HTTP/1.1
+Host: 124.220.158.211:8002
+Accept-Encoding: gzip, deflate
+User-Agent: Arachni/v1.5.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+X-Arachni-Scan-Seed: 424d55c69bf710473c7bc429f8b08fef
+Content-Length: 55
+Expect: 100-continue
+
+Created by Arachni. PUT424d55c69bf710473c7bc429f8b08fef</pre>
+    </div>
+
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-informational-interesting_responses-3345449079-affected_page-http_response"
+            href="#!/issues/trusted/severity/informational/interesting_responses/3345449079/affected_page/http_response">
+                HTTP response
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP response used as the page basis.
+
+            (Binary bodies will not be displayed.)
+        </p>
+
+        
+            <pre class="code-container"><span class="issue-proof-highlight">HTTP/1.1 100 </span>
+
+HTTP/1.1 403 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Content-Length: 275
+Date: Tue, 20 Jun 2023 16:35:24 GMT
+Connection: close
+
+&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id=&#39;created&#39;&gt;Tue Jun 20 16:35:24 GMT 2023&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Forbidden, status=403).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+        
+    </div>
+</div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#!/issues/trusted/severity/informational/interesting_responses/3345449079/referring_page">
+                    <i class="fa fa-link"></i>
+                </a>
+
+                <a data-toggle="collapse" href="#issues-trusted-severity-informational-interesting_responses-3345449079-referring_page">
+                    Referring page:
+
+                    <code>http://124.220.158.211:8002/</code>
+                </a>
+            </h4>
+        </div>
+        <div id="issues-trusted-severity-informational-interesting_responses-3345449079-referring_page" class="panel-collapse collapse">
+            <div class="panel-body">
+                
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-informational-interesting_responses-3345449079-referring_page-http_request"
+            href="#!/issues/trusted/severity/informational/interesting_responses/3345449079/referring_page/http_request">
+                HTTP request
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP request used to retrieve the page.
+        </p>
+
+        <pre class="code-container">GET / HTTP/1.1
+Host: 124.220.158.211:8002
+Accept-Encoding: gzip, deflate
+User-Agent: Arachni/v1.5.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+X-Arachni-Scan-Seed: 424d55c69bf710473c7bc429f8b08fef
+
+</pre>
+    </div>
+
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-informational-interesting_responses-3345449079-referring_page-http_response"
+            href="#!/issues/trusted/severity/informational/interesting_responses/3345449079/referring_page/http_response">
+                HTTP response
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP response used as the page basis.
+
+            (Binary bodies will not be displayed.)
+        </p>
+
+        
+            <pre class="code-container">HTTP/1.1 403 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Content-Length: 275
+Date: Tue, 20 Jun 2023 16:35:24 GMT
+
+&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id=&#39;created&#39;&gt;Tue Jun 20 16:35:24 GMT 2023&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Forbidden, status=403).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+        
+    </div>
+</div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+                
+            
+                
+
+                <div class="row">
+                    <div class="col-md-10">
+                        <h3>
+                            <a id="issues-trusted-severity-informational-allowed_methods"
+                               href="#!/issues/trusted/severity/informational/allowed_methods"
+                            >
+                                Allowed HTTP methods
+                            </a>
+
+                            <span class="badge">
+                                1
+                            </span>
+
+                            <small>
+                                <span class="label label-default">
+                                    allowed_methods
+                                </span>
+                            </small>
+                        </h3>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="issue-description markdown">
+                                    
+<p>There are a number of HTTP methods that can be used on a webserver (<code>OPTIONS</code>,
+<code>HEAD</code>, <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code> etc.).  Each of these methods perform a
+different function and each have an associated level of risk when their use is
+permitted on the webserver.</p>
+
+<p>A client can use the <code>OPTIONS</code> method within a request to query a server to
+determine which methods are allowed.</p>
+
+<p>Cyber-criminals will almost always perform this simple test as it will give a
+very quick indication of any high-risk methods being permitted by the server.</p>
+
+<p>Arachni discovered that several methods are supported by the server.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row">
+
+                            
+
+                            
+                            <div class="col-md-12">
+                                <h4>
+                                    <a id="issues-trusted-severity-informational-allowed_methods-remedy_guidance"
+                                       href="#!/issues/trusted/severity/informational/allowed_methods/remedy_guidance"
+                                    >
+                                        Remediation guidance
+                                    </a>
+                                </h4>
+
+                                <div class="issue-remedy_guidance markdown">
+                                    
+<p>It is recommended that a whitelisting approach be taken to explicitly permit the
+HTTP methods required by the application and block all others.</p>
+
+<p>Typically the only HTTP methods required for most applications are <code>GET</code> and
+<code>POST</code>. All other methods perform actions that are rarely required or perform
+actions that are inherently risky.</p>
+
+<p>These risky methods (such as <code>PUT</code>, <code>DELETE</code>, etc) should be protected by strict
+limitations, such as ensuring that the channel is secure (SSL/TLS enabled) and
+only authorised and trusted clients are permitted to use them.</p>
+
+                                </div>
+                            </div>
+                            
+
+                            
+                        </div>
+                        
+                    </div>
+
+                    
+                    <div class="col-md-2">
+                        <h4>
+                            <a id="issues-trusted-severity-informational-allowed_methods-references"
+                               href="#!/issues/trusted/severity/informational/allowed_methods/references"
+                            >
+                                References
+                            </a>
+                        </h4>
+
+                        <hr/>
+
+                        <ul class="list-unstyled">
+                            
+
+                            
+                                <li>
+                                    <a href="http://httpd.apache.org/docs/2.2/mod/core.html#limitexcept"> Apache.org</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                
+                    <div id="issues-trusted-severity-informational-allowed_methods-971111291">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#!/issues/trusted/severity/informational/allowed_methods/971111291">
+                            In <code>server</code>
+
+                            
+
+                            
+                                using
+                                <code>OPTIONS</code>
+                            
+                        </a>
+
+                        at
+
+                        <a href="http://124.220.158.211:8002/">
+                            http://124.220.158.211:8002/
+                        </a>
+
+                        pointing to
+                        <a href="http://124.220.158.211:8002/">
+                            http://124.220.158.211:8002/
+                        </a>.
+                    </h4>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+
+
+
+
+
+
+<table class="table table-condensed table-fixed">
+    <thead>
+    <tr>
+        
+
+        
+
+        
+            <th>
+                Proof
+
+                <a href="#" rel="tooltip"
+                   title="This string was used to verify the existence of the issue.">
+                    <i class="fa fa-info"></i>
+                </a>
+            </th>
+        
+
+    </tr>
+    </thead>
+    <tr>
+
+        
+
+        
+
+        
+            <td class="wrap">
+                <pre class='code-container'>GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH</pre>
+            </td>
+        
+    </tr>
+</table>
+
+
+                        </div>
+                    </div>
+
+                    <div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#!/issues/trusted/severity/informational/allowed_methods/971111291/vector">
+                    <i class="fa fa-link"></i>
+                </a>
+
+                <a data-toggle="collapse" href="#issues-trusted-severity-informational-allowed_methods-971111291-vector">
+                    Vector information
+                </a>
+            </h4>
+        </div>
+        <div id="issues-trusted-severity-informational-allowed_methods-971111291-vector" class="panel-collapse collapse">
+            <div class="panel-body">
+                
+
+<table class="table">
+    <tr>
+        <th>Type</th>
+        <th>In</th>
+        <th>Action</th>
+
+        
+    </tr>
+    <tr>
+        <td><code>server</code></td>
+        <td>
+            <a href="http://124.220.158.211:8002/">
+                http://124.220.158.211:8002/
+            </a>
+        </td>
+        <td>
+            <a href="http://124.220.158.211:8002/">
+                http://124.220.158.211:8002/
+            </a>
+        </td>
+
+        
+    </tr>
+</table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#!/issues/trusted/severity/informational/allowed_methods/971111291/affected_page">
+                    <i class="fa fa-link"></i>
+                </a>
+
+                <a data-toggle="collapse" href="#issues-trusted-severity-informational-allowed_methods-971111291-affected_page">
+                    Affected page:
+
+                    <code>http://124.220.158.211:8002/</code>
+                </a>
+            </h4>
+        </div>
+        <div id="issues-trusted-severity-informational-allowed_methods-971111291-affected_page" class="panel-collapse collapse">
+            <div class="panel-body">
+                
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-informational-allowed_methods-971111291-affected_page-http_request"
+            href="#!/issues/trusted/severity/informational/allowed_methods/971111291/affected_page/http_request">
+                HTTP request
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP request used to retrieve the page.
+        </p>
+
+        <pre class="code-container">OPTIONS / HTTP/1.1
+Host: 124.220.158.211:8002
+Accept-Encoding: gzip, deflate
+User-Agent: Arachni/v1.5.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+X-Arachni-Scan-Seed: 424d55c69bf710473c7bc429f8b08fef
+
+</pre>
+    </div>
+
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-informational-allowed_methods-971111291-affected_page-http_response"
+            href="#!/issues/trusted/severity/informational/allowed_methods/971111291/affected_page/http_response">
+                HTTP response
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP response used as the page basis.
+
+            (Binary bodies will not be displayed.)
+        </p>
+
+        
+            <pre class="code-container">HTTP/1.1 404 
+Access-Control-Allow-Methods: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Allow: <span class="issue-proof-highlight">GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH</span>
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Content-Length: 275
+Date: Tue, 20 Jun 2023 16:35:24 GMT
+
+&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id=&#39;created&#39;&gt;Tue Jun 20 16:35:24 GMT 2023&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Not Found, status=404).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+        
+    </div>
+</div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#!/issues/trusted/severity/informational/allowed_methods/971111291/referring_page">
+                    <i class="fa fa-link"></i>
+                </a>
+
+                <a data-toggle="collapse" href="#issues-trusted-severity-informational-allowed_methods-971111291-referring_page">
+                    Referring page:
+
+                    <code>http://124.220.158.211:8002/</code>
+                </a>
+            </h4>
+        </div>
+        <div id="issues-trusted-severity-informational-allowed_methods-971111291-referring_page" class="panel-collapse collapse">
+            <div class="panel-body">
+                
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-informational-allowed_methods-971111291-referring_page-http_request"
+            href="#!/issues/trusted/severity/informational/allowed_methods/971111291/referring_page/http_request">
+                HTTP request
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP request used to retrieve the page.
+        </p>
+
+        <pre class="code-container">GET / HTTP/1.1
+Host: 124.220.158.211:8002
+Accept-Encoding: gzip, deflate
+User-Agent: Arachni/v1.5.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.8,he;q=0.6
+X-Arachni-Scan-Seed: 424d55c69bf710473c7bc429f8b08fef
+
+</pre>
+    </div>
+
+    <div class="col-md-6">
+        <strong>
+            <a
+            id="issues-trusted-severity-informational-allowed_methods-971111291-referring_page-http_response"
+            href="#!/issues/trusted/severity/informational/allowed_methods/971111291/referring_page/http_response">
+                HTTP response
+            </a>
+        </strong>
+
+        <p class="text-muted">
+            Raw HTTP response used as the page basis.
+
+            (Binary bodies will not be displayed.)
+        </p>
+
+        
+            <pre class="code-container">HTTP/1.1 403 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Content-Length: 275
+Date: Tue, 20 Jun 2023 16:35:24 GMT
+
+&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id=&#39;created&#39;&gt;Tue Jun 20 16:35:24 GMT 2023&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Forbidden, status=403).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</pre>
         
     </div>
 </div>
@@ -1880,7 +2693,7 @@ Date: Sat, 17 Jun 2023 02:59:04 GMT
                             Total
                         </dt>
                         <dd>
-                            1
+                            2
                         </dd>
 
                         <dt>
@@ -1894,7 +2707,7 @@ Date: Sat, 17 Jun 2023 02:59:04 GMT
                             With issues
                         </dt>
                         <dd>
-                            1
+                            2
                         </dd>
 
                         <dt>
@@ -1912,8 +2725,16 @@ Date: Sat, 17 Jun 2023 02:59:04 GMT
 
                         <li>
                             <a class="text-danger"
-                                href="http://124.220.158.211:8848/">
-                                http://124.220.158.211:8848/
+                                href="http://124.220.158.211:8002/">
+                                http://124.220.158.211:8002/
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-danger"
+                                href="http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef">
+                                http://124.220.158.211:8002/Arachni-424d55c69bf710473c7bc429f8b08fef
                             </a>
                         </li>
                     
@@ -1951,10 +2772,10 @@ Date: Sat, 17 Jun 2023 02:59:04 GMT
 
         
             <tr>
-                <th>404</th>
+                <th>403</th>
                 <td>
-                    <a href="http://124.220.158.211:8848/">
-                        http://124.220.158.211:8848/
+                    <a href="http://124.220.158.211:8002/">
+                        http://124.220.158.211:8002/
                     </a>
                 </td>
             </tr>

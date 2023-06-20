@@ -1,0 +1,8 @@
+[32mINFO    [0m root:test_user_module.py:24 接口用例数据：[3.0, '提供空的密码进行注册', 'http://127.0.0.1:8000', '/users/', 'post', '', '"status": 500', '', "{\n   'Accept': '*/*',\n   'Host': '127.0.0.1:8000',\n   'Connection': 'keep-alive',\n   'Content-type': 'multipart/form-data'\n}", '']
+[32mINFO    [0m root:request_util.py:72 请求头：{'Accept': '*/*', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Content-type': 'multipart/form-data'}
+[32mINFO    [0m root:request_util.py:11 请求原始数据：
+[32mINFO    [0m root:request_util.py:81 Before sending: False
+[32mINFO    [0m root:request_util.py:96 接口调用成功！
+[32mINFO    [0m root:request_util.py:97 响应数据：{"timestamp":"2023-06-20T16:16:47.558+00:00","status":500,"error":"Internal Server Error","path":"/users/"}
+[32mINFO    [0m root:request_util.py:48 无关联参数提取..
+[32mINFO    [0m root:assert_util.py:12 【"status":500】关键字断言成功【{"timestamp":"2023-06-20T16:16:47.558+00:00","status":500,"error":"Internal Server Error","path":"/users/"}】

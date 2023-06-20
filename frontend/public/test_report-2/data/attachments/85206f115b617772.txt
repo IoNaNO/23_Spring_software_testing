@@ -1,0 +1,7 @@
+[32mINFO    [0m root:test_ticket_module.py:49 接口用例数据：['1', '查询不存在用户的订单情况', 'http://127.0.0.1:8001', '/users/9999999/orders/', 'get', '', '"status": "success"', '', " {\n   \n   'Accept': '*/*',\n   'Host': '127.0.0.1:8001',\n   'Connection': 'keep-alive'\n}", '']
+[32mINFO    [0m root:request_util.py:72 请求头：{'Accept': '*/*', 'Host': '127.0.0.1:8001', 'Connection': 'keep-alive'}
+[32mINFO    [0m root:request_util.py:11 请求原始数据：/users/9999999/orders/
+[32mINFO    [0m root:request_util.py:96 接口调用成功！
+[32mINFO    [0m root:request_util.py:97 响应数据：{"data":{"links":[],"content":[]},"message":0,"status":"success"}
+[32mINFO    [0m root:request_util.py:48 无关联参数提取..
+[32mINFO    [0m root:assert_util.py:12 【"status":"success"】关键字断言成功【{"data":{"links":[],"content":[]},"message":0,"status":"success"}】

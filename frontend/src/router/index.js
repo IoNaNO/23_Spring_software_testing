@@ -118,6 +118,14 @@ const routes = [
         beforeEnter() { location.href = 'allure-report-4/index.html' }
       },
       {
+        path: '/test_report',
+        beforeEnter() { location.href = 'test_report/index.html' }
+      },
+      {
+        path: '/test_report-2',
+        beforeEnter() { location.href = 'test_report-2/index.html' }
+      },
+      {
         path:'/system',
         name:'system',
         component:System

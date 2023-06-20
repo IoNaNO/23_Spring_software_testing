@@ -1,0 +1,8 @@
+[32mINFO    [0m root:test_user_module.py:39 接口用例数据：[1.0, '提供正确的用户名和密码进行访问令牌请求', 'http://127.0.0.1:8000', '/users/token/', 'post', '{\n    "user_name": "NeoChen",\n    "password": "36ye98273ujh"\n}', '"status": "success"', '', "{\n   'Accept': '*/*',\n   'Host': '127.0.0.1:8000',\n   'Connection': 'keep-alive',\n   'Content-type': 'multipart/form-data'\n}", '']
+[32mINFO    [0m root:request_util.py:72 请求头：{'Accept': '*/*', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Content-type': 'multipart/form-data'}
+[32mINFO    [0m root:request_util.py:11 请求原始数据：{'user_name': 'NeoChen', 'password': '36ye98273ujh'}
+[32mINFO    [0m root:request_util.py:81 Before sending: True
+[32mINFO    [0m root:request_util.py:96 接口调用成功！
+[32mINFO    [0m root:request_util.py:97 响应数据：{"data":{"userId":36,"token":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhYjkxNjQ1Nzk2MmY0ZmIyOTU3MjQ1OWU2ZDc0NDJhYiIsInN1YiI6IjM2IiwiaXNzIjoic2ciLCJpYXQiOjE2ODcyNzU1NTAsImV4cCI6MTY4ODQ4NTE1MH0.LHal72lp1QktgEiRfE9jbVG5PGcg0zng0v9BinSYbYk"},"message":"登录成功","status":"success"}
+[32mINFO    [0m root:request_util.py:48 无关联参数提取..
+[32mINFO    [0m root:assert_util.py:12 【"status":"success"】关键字断言成功【{"data":{"userId":36,"token":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhYjkxNjQ1Nzk2MmY0ZmIyOTU3MjQ1OWU2ZDc0NDJhYiIsInN1YiI6IjM2IiwiaXNzIjoic2ciLCJpYXQiOjE2ODcyNzU1NTAsImV4cCI6MTY4ODQ4NTE1MH0.LHal72lp1QktgEiRfE9jbVG5PGcg0zng0v9BinSYbYk"},"message":"登录成功","status":"success"}】
