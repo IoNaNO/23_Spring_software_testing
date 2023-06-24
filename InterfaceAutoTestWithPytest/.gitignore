@@ -119,3 +119,6 @@ dmypy.json
 
 # cython debug
 cython_debug/
+
+# log
+log

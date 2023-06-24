@@ -5,5 +5,5 @@
 
 ## init environment
 ```bash
-set PYTHONPATH=%PYTHONPATH%;D:\repo\TestExample\InterfaceAutoTestWithPytest
+set PYTHONPATH=%PYTHONPATH%;D:\repo\23_Spring_software_testing\InterfaceAutoTestWithPytest
 ```

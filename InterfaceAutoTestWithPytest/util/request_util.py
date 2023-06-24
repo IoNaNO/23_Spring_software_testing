@@ -9,6 +9,7 @@ from util.keyword_function import *
 # 请求数据预处理
 def api_preprocess(request_data):
     logging.info("请求原始数据：%s" % request_data)
+    return request_data
     try:
         # 匹配需要调用唯一数函数的参数
         if re.search(r"\$\{get_unique_num\w*\}", request_data):
@@ -64,14 +65,24 @@ def api_postprocess(response_data, extract_var):
 
 # 接口调用函数
 def api_request(url, uri, method, data, response_var, headers=None, cookies=None):
+    flag=False
     if(headers):
         headers = headers.replace("'", '"')
         headers = JsonHandler.json_to_dict(headers)
+        logging.info("请求头：%s" % headers)
+        if(headers.get("Content-type") == "multipart/form-data"):
+            flag=True
+            if(data):
+                data = JsonHandler.json_to_dict(data)
     try:
         if method.lower() == "post":
             # post 对请求体数据进行预处理
             request_data = api_preprocess(data)
-            response = requests.post((url+uri), data=request_data, headers=headers, cookies=cookies)
+            logging.info(f"Before sending: {isinstance(request_data,dict)}")
+            if(flag):
+                response = requests.post((url+uri), data=request_data, cookies=cookies)
+            else:
+                response = requests.post((url+uri), data=request_data, headers=headers, cookies=cookies)
         elif method.lower() == "get":
             # get 对请求URL数据进行预处理
             uri = api_preprocess(uri)
